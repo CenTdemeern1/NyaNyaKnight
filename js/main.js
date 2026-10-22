@@ -1,3 +1,9 @@
+// Hiya to whomever is reading this. This is a mod for Progress Knight 2.0 that was slop code modified by me~ <3
+// I am going to try to leave notes because the original file didn't explain anything. Since I am using this
+// as a learning experience, I will document what I find here for anyone else who wants to play with the code.
+// 
+// uh just a heads up, I kinda don't know what I am doing or what I am messing with so keep that in mind~ :3
+
 var gameData = {
     taskData: {},
     itemData: {},
@@ -37,6 +43,10 @@ const baseLifespan = 365 * 70
 const baseGameSpeed = 4
 
 const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task display"]
+
+// This is the job table thingy. You can modify all the classes and requirements here.
+// the code seems to call these names specifically so if you modify them make sure you modify
+// the other variables or you will completely break the game... like I did... several times~ heh~
 
 const jobBaseData = {
     "Scrounger": {name: "Scrounger", maxXp: 50, income: 5},
@@ -85,6 +95,8 @@ const jobBaseData = {
 	
 	
 }
+// This appears to be the skill table. Once again, if you rename these variables make sure that you
+// update them everywhere else or it will also break the game.
 
 const skillBaseData = {
     "Mindfulness": {name: "Mindfulness", maxXp: 100, effect: 0.01, description: "Ability XP"},
@@ -137,6 +149,8 @@ const skillBaseData = {
 	"Epiphany": {name: "Epiphany", maxXp: 100, effect: 0.012, description: "Galactic Council XP"},
 
 }
+// This is the start of the shopping tab page/table thingy. This first part is the "properties" section.
+// ... at the risk of repeating myself too often. Make sure you update everything everywhere~ heh~ <3
 
 const itemBaseData = {
     "Stray": {name: "Stray", expense: 0, effect: 1},
@@ -156,6 +170,7 @@ const itemBaseData = {
 	"Astral Realm": {name: "Astral Realm", expense: 160000000000000, effect: 150000},
 	"Galactic Throne": {name: "Galactic Throne", expense: 5000000000000000, effect: 300000},
 
+// This is the start of the items table in the shopping tab.
 
     "Diary": {name: "Diary", expense: 10, effect: 1.5, description: "Ability XP"},
     "Weighted Yarnballs": {name: "Weighted Yarnballs", expense: 50, effect: 1.5, description: "Strength XP"},
@@ -168,8 +183,8 @@ const itemBaseData = {
 	"Observatory": {name: "Observatory", expense: 140000000, effect: 5, description: "Magic XP"},
 	"Mind's Eye": {name: "Mind's Eye", expense: 3250000000, effect: 10, description: "Fundamentals XP"},
 	"Angelic Sapphire": {name: "Angelic Sapphire", expense: 28050000000, effect: 3, description: "Void Manipulation XP"},
-    "Void Armor": {name: "Void Armor", expense: 197050000000, effect: 3, description: "The Void XP"},
-	"Void Blade": {name: "Void Blade", expense: 502050000000, effect: 3, description: "Ability XP"},
+    "Nyanimite Armor": {name: "Nyanimite Armor", expense: 197050000000, effect: 3, description: "The Void XP"},
+	"Etheral Claws": {name: "Etheral Claws", expense: 502050000000, effect: 3, description: "Ability XP"},
 	"Void Orb": {name: "Void Orb", expense: 1202050000000, effect: 3, description: "Void Manipulation XP"},
 	"Void Dust": {name: "Void Dust", expense: 25002050000000, effect: 3, description: "The Void XP"},
 	"Celestial Robe": {name: "Celestial Robe", expense: 300002050000000, effect: 5, description: "Galactic Council XP"},
@@ -177,6 +192,8 @@ const itemBaseData = {
 	"Multiverse Fragment": {name: "Multiverse Fragment", expense: 200500002050000000, effect: 5, description: "Happiness"},
 
 }
+// Here is where the game organizes the classes and skills. So you write them in order. If you want the order
+// to be different I think that is possible. I'll mess with it later and update this note.
 
 const jobCategories = {
     "Catgirl Work"            : ["Scrounger", "Catnip Farmer", "Maid", "Catgirl Cafe Waitress", "Sushi Chef", "Business Catgirl"],
@@ -200,8 +217,11 @@ const skillCategories = {
 
 const itemCategories = {
     "Properties"             : ["Stray", "Tattered Sheets", "Makeshift Cat Tree", "Apartment", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "Catgirl City Ruler", "Nyation Ruler", "Yarn Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
-    "Misc"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Void Armor", "Void Blade", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
+    "Misc"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
 }
+// Here is where you update the header row colors. Its does wierd things when you use hex colors. I will probably update this
+// to all RGB later which is easier for me to program. Maybe... we'll see~ lol
+// On a serious note, if you don't write the hex in properly you will break the header color and it will display nothing~ :3
 
 const headerRowColors = {
     "Catgirl Work": "#407d24",
@@ -219,9 +239,11 @@ const headerRowColors = {
     "Properties": "#219ebc",
     "Misc": "#b56576",
 }
+// When you over your mouse over the different classes and items in the game this little word bubble will pop up.
+// This is where you modify those messages on screen. Have with it. I certainly did~ :3
 
 const tooltips = {
-	//Common work
+	//Common work (Catgirl Work)
     "Scrounger": "Meow and beg day and night for a couple of copper coins. It feels like you are at the brink of death each day.",
     "Catnip Farmer": "Plow the fields and grow the catnip for the local cat folks. It's not much but it's honest work.",
     "Maid": "Work for a demanding master keeping their house clean and cooking them three square meals a day. A stressful and still a poor paying job.",
@@ -229,7 +251,7 @@ const tooltips = {
     "Sushi Chef": "Make delecious sushi rolls for the local business catfolks. A respectable and fun job for any catgirl.",
     "Business Catgirl": "Travel from town to town opening your laptop and mashing keys randomly. The job pays decently well and you get to be the boss.",
 	
-    //Military
+    //Military (The Mewarine Corps)
     "Recruit": "Learn the basics of pouncing and slashing with your claws. Dangerous training for low pay but every catgirl warrior starts somewhere.",
     "Paw Patrol": "Put your life on the line to battle with enemy puppygirls. A courageous, respectable job but you are still a nobody in the grand scheme of things.",
     "Neko Warrior": "More experienced and useful than the average Paw Patrol Catfolk, take out the enemy puppygirls in battle with your catgirl prowess. The pay is not that bad but the glory is better.",
@@ -239,7 +261,7 @@ const tooltips = {
     "Divine Neko Warrior": "Obliterate squadrons of enemy puppygirls in one go with extraordinary catlike proficiency, while equipped with magically imbued claws. Such a feared catgirl on the battlefield is highly respected and paid extremely well.",
     "Grand Meowarshal": "Feared by all puppygirl nations, obliterate entire armies of puppygirls in a blink of an eye. Roughly every century, only one Divine Neko Warrior is worthy of receiving such a legendary title.",
 
-    //The Arcane Association
+    //The Arcane Association (Meowgic Arcanium)
     "Pupil": "Study the theory of mana and practice basic catgirl spells. There is minor pay to cover living costs, however, this is a necessary stage in becoming a Neko Mage.",
     "Apprentice Neko Mage": "Under the supervision of a skilled mage, perform basic spells against enemies in battle. Generous pay will be provided to cover living costs.",
     "Adept Neko Mage": "Turn the tides of battle through casting intermediate spells and mentor other apprentices. The pay for this particular job is extremely high.",
@@ -249,7 +271,7 @@ const tooltips = {
     "College Administrator": "Spend your days administrating Meowgic Arcanium and investigate the concepts of forbidden catgirl magic. The Administrator receives ludicrous amounts of pay daily.",
 	"Grandmaster": "You wield truly unlimited power as a mortal, making you nearly unstoppable. By ruling with a heart of gold, everyone in the Catgirl College obeys your lessons & commands.",
 
-    //The Void
+    //The Void (Not the void? Idk... something with angels is better...)
     "Angel": "Corrupted by Void, you are slowly turning into a slave with no free will, just to serve the Void for the rest of eternity... Can you resist it, or will it consume you forever?",
     "Guardian Angel": "Each day you are succumbing to the Void more and more, can you hold to your humanity for a bit longer, or will you let it devour you?",
     "Archangel": "You become an inquisitive yet putrid creature that siphons life from everything around you.",
@@ -259,7 +281,7 @@ const tooltips = {
 	"Hevanly Gatekeeper": "You gazed into the dark heart of the Void long enough to become one of the most powerful and feared beings, all lesser void creatures are at your command.",
 	"Guardian of the Hevans": "Creator of the Void, a vast canvas of blackness and nothingness, in which the concept of its existence defies all logic, nothing will escape you.",
  
-    //Galactic Council
+    //Galactic Council (End Game Classes)
     "Galactic Wanderer": "With the powers bestowed upon you by an unknown entity you wander around, visiting places revered and feared in search of answers.",
     "Celestial Observer": "Extremely powerful being with tremedous telekinetic powers and the ability to rearrange the molecular structure of matter and energy, even up to cosmic scale.",
 	"Demipotent": "A nigh-omnipotent cosmological entity, with vast matter and energy manipulation abilities that help you push the boundaries of the Universe itself.",
@@ -267,7 +289,7 @@ const tooltips = {
 	"One Above All": "You have become the catgirl creator of everything, a literal god in control of all aspects of the universe. Perhaps maybe you always were a god? Maybe you had simply lost your way or choose to be a mortal for a short time. No matter how it happend or what led you here, you sit upon your throne overseeing the entire universe until the end of time.",
 	
 
-    //Fundamentals
+    //Fundamentals (Catgirl Fundamentals)
     "Mindfulness": "Improve your learning speed by learning to pay more attention to stuffs.",
     "Fruitfulness": "Learn to randomly bat things around less at work and receive more job experience per day.",
     "Meowing": "Study the tricks of the being an adorable and persuasive catgirl to lower any type of expense.",
@@ -278,7 +300,7 @@ const tooltips = {
     "Battle Mewneuvers": "Create and revise pouncing strategies, improving experience gained in The Mewarine Corps.",
     "Pouncing": "Strengthen your endurance through habit and repetition, making you feel more courage throughout your body.",
 
-    //Magic
+    //Magic (Catgirl Magic)
     "Manya Control": "Strengthen your mana channels throughout your body, aiding you in becoming a more powerful magical user.",
     "Feline Essence": "Lengthen your lifespan through the means of forbidden catgirl magic. Could this be the key to the immortality you seek?",
     "Zoomy Casting": "Bend space and time through forbidden catgirl magic, speeding up both your physical skills and quickining your learning processes.",
@@ -287,7 +309,7 @@ const tooltips = {
 	"Coin Transmutation": "As the highest ranking member of the Catgirl Magic College, gain access forbidden transmutation spells to gain additional funds to further your skills and research.",
 	"Brainwashing": "A technique designed to manipulate human thought and action against their desire.",
 
-     //Dark magic - Evil Required
+     //Dark magic - Evil Required (The code will refer to this as "evil" but mine is Cuteness)
     "Adorable Allure": "Surround yourself with an irresistible aura of cuteness, convincing others to teach you any job or skill with ease.",
     "Fluff Ascension": "Through the means of magic you have learned to improve the softness of your fur, improving your cuteness gains between rebirths.",
     "Weaponized Cuteness": "Emit an overwhelmingly adorable aura that leaves merchants powerless to resist giving you heavy discounts.",
@@ -299,7 +321,7 @@ const tooltips = {
 	"Zoomy Looper": "Focus your magical cutie energy to enhance your speed even further, giving you nearly unlimited control over time itself.",
 	"Cutie Incarnate": "You have became the essence of adorablness. No other creature could ever possibly attain this level of cuteness.",
 	
-	//Void Manipulation
+	//Void Manipulation (Ughhh not a void thing. Why so dark? Anyways... angel something idk yet...)
 	"Absolute Wish": "The power to fulfill absolutely any and all wishes without any limitations.",
     "Angelic Amplification": "You surrender yourself to the Void, making it easier to take control of you.",
     "Enlightened Mind": "In a trance like state, you feel the Void controlling your thoughts, perception, memories, emotions and personality.",
@@ -314,7 +336,7 @@ const tooltips = {
 	"Spectrial Ruminator": "Exploit the unlimited potential of multiverse energies and collect its resources.",
 	"Eternal Tinkerer": "Absolute power corrupts absolutely.",
 	
-	//Almightiness
+	//Almightiness (I forgot what these skills do again and will update them later lol)
 	"Yin Yang": "Born from chaos when the universe was first created, believed to exist in harmony, balancing evil and good.",
 	"Parallel Universe": "Self-contained plane of existence, co-existing with one's own, helping you restore fragments of your forgotten power.",
 	"Higher Dimensions": "By possesing the power to partially alter the laws of physics and transceding lower dimensional spaces, your existence becomes never-ending.",
@@ -350,14 +372,18 @@ const tooltips = {
 	"Observatory": "With new access to wealth comes new opportunities to study. Rent an Observatory for studying terrestrial, marine and celestial events.",
 	"Mind's Eye": "Lets you see memories, remember images, and even see new pictures and ideas.",
 	"Angelic Sapphire": "Helps you shape and manipulate matter, even transmute it and rebuild into anything of your choosing.",
-	"Void Armor": "Generates an innate armor as a part of you body, which is resistant to attacks, harm or pain.",
-	"Void Blade": "Forged from void dust and dark matter, can slash through dimensional barriers. It's a weapon of choice for every Void Reaver.",
+	"Nyanimite Armor": "Generates an innate armor as a part of you body, which is resistant to attacks, harm or pain.",
+	"Etheral Claws": "Forged from void dust and dark matter, can slash through dimensional barriers. It's a weapon of choice for every Void Reaver.",
 	"Void Orb": "When the orb touches non void entities, it instantly disintegrate them. Harnessing its power from Void realm.",
 	"Void Dust": "Purest version of void created material, a teaspoon of it is as heavy as a small planet. ",
 	"Celestial Robe": "The most powerful and essential equipment of any Celestial. Acts as a source of infinite power.",
 	"Universe Fragment": "From the time the universe was born. Can create another small universes.",
 	"Multiverse Fragment": "Came into existance long before our universe was created, this strange looking object with no shape radiates unlimited energy.",
 }
+// Okay so after staring at this for a long time and thinking really hard I have managed to achieve 2 things.
+// Smoke coming out of my ears and that this is likely where the code calculates all its multipliers and stuffs.
+// What I do know for sure is that messing with this stuff is a sure fire way to break everything. So far
+// I only messed with changing basic variables here so far.
 
 const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "Nv", "Vg", "Uv", "Dv", "Tv", "Qt", "Qv", "Sv", "Oc", "Nd", "Tg", "OMG"];
 
@@ -402,7 +428,7 @@ function addMultipliers() {
             task.xpMultipliers.push(getBindedItemEffect("Diary"))
             task.xpMultipliers.push(getBindedItemEffect("Fancy Chevrette"))
             task.xpMultipliers.push(getBindedItemEffect("Library"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Blade"))
+			task.xpMultipliers.push(getBindedItemEffect("Etheral Claws"))
 			task.xpMultipliers.push(getBindedTaskEffect("Divine Symbiosis"))
 			task.xpMultipliers.push(getBindedItemEffect("Universe Fragment"))
 			task.xpMultipliers.push(getBindedTaskEffect("Cutie Incarnate"))
@@ -430,7 +456,7 @@ function addMultipliers() {
 			task.incomeMultipliers.push(getBindedTaskEffect("Coin Transmutation"))	
 	    } else if (jobCategories["The Void"].includes(task.name)) {
             task.xpMultipliers.push(getBindedTaskEffect("Angelic Amplification"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Armor"))
+			task.xpMultipliers.push(getBindedItemEffect("Nyanimite Armor"))
 			task.xpMultipliers.push(getBindedItemEffect("Void Dust"))
 		} else if (jobCategories["Galactic Council"].includes(task.name)) {
 			task.xpMultipliers.push(getBindedItemEffect("Celestial Robe"))
@@ -1003,7 +1029,10 @@ function setSkillWithLowestMaxXp() {
             
             // NOTE : FRAGILE FIX
             // This fix will break if the Concentration skill is either removed from the game, renamed, or the requirement is no
-            // longer immediately satisfied upon starting a new game. 
+            // longer immediately satisfied upon starting a new game.
+
+            // Update: You can "change" the name of the skill but if you mess with this fix too much you absolutely
+            // will break the game~ lol
             if(requirement == null) {
                 requirement = gameData.requirements["Mindfulness"];
             }
@@ -1074,6 +1103,7 @@ function format(number,decimals= 1) {
     // format number and add suffix
     return scaled.toFixed(decimals) + suffix;
 }
+// This handles the coins. I figured I'd point that out since it took me forever to find it on my own~ lol
 
 function formatCoins(coins, element) {
     var tiers = ["p", "g", "s"]
@@ -1440,6 +1470,8 @@ window.addEventListener('keydown', function(e) {
 
 
 //Init
+// Init what? What does that even mean? Anyways. What I think it does is check that you met the requirements to
+// upgrade to another class or make progress. I'm still figuring it out myself...
 
 createAllRows(jobCategories, "jobTable")
 createAllRows(skillCategories, "skillTable")
@@ -1615,8 +1647,8 @@ gameData.requirements = {
 	"Observatory": new CoinRequirement([getItemElement("Observatory")], [{requirement: gameData.itemData["Observatory"].getExpense() * 100}]),
 	"Mind's Eye": new CoinRequirement([getItemElement("Mind's Eye")], [{requirement: gameData.itemData["Mind's Eye"].getExpense() * 100}]),
 	"Angelic Sapphire": new CoinRequirement([getItemElement("Angelic Sapphire")], [{requirement: gameData.itemData["Angelic Sapphire"].getExpense() * 100}]),
-	"Void Armor": new CoinRequirement([getItemElement("Void Armor")], [{requirement: gameData.itemData["Void Armor"].getExpense() * 100}]),
-	"Void Blade": new CoinRequirement([getItemElement("Void Blade")], [{requirement: gameData.itemData["Void Blade"].getExpense() * 100}]),
+	"Nyanimite Armor": new CoinRequirement([getItemElement("Nyanimite Armor")], [{requirement: gameData.itemData["Nyanimite Armor"].getExpense() * 100}]),
+	"Etheral Claws": new CoinRequirement([getItemElement("Etheral Claws")], [{requirement: gameData.itemData["Etheral Claws"].getExpense() * 100}]),
 	"Void Orb": new CoinRequirement([getItemElement("Void Orb")], [{requirement: gameData.itemData["Void Orb"].getExpense() * 100}]),
 	"Void Dust": new CoinRequirement([getItemElement("Void Dust")], [{requirement: gameData.itemData["Void Dust"].getExpense() * 100}]),
 	"Celestial Robe": new CoinRequirement([getItemElement("Celestial Robe")], [{requirement: gameData.itemData["Celestial Robe"].getExpense() * 100}]),
