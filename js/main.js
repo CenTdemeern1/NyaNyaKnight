@@ -39,47 +39,47 @@ const baseGameSpeed = 4
 const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task display"]
 
 const jobBaseData = {
-    "Beggar": {name: "Beggar", maxXp: 50, income: 5},
-    "Farmer": {name: "Farmer", maxXp: 100, income: 9},
-    "Fisherman": {name: "Fisherman", maxXp: 200, income: 15},
-    "Miner": {name: "Miner", maxXp: 400, income: 40},
-    "Blacksmith": {name: "Blacksmith", maxXp: 800, income: 80},
-    "Merchant": {name: "Merchant", maxXp: 1600, income: 150},
+    "Scrounger": {name: "Scrounger", maxXp: 50, income: 5},
+    "Catnip Farmer": {name: "Catnip Farmer", maxXp: 100, income: 9},
+    "Maid": {name: "Maid", maxXp: 200, income: 15},
+    "Catgirl Cafe Waitress": {name: "Catgirl Cafe Waitress", maxXp: 400, income: 40},
+    "Sushi Chef": {name: "Sushi Chef", maxXp: 800, income: 80},
+    "Business Catgirl": {name: "Business Catgirl", maxXp: 1600, income: 150},
 
-    "Squire": {name: "Squire", maxXp: 100, income: 5},
-    "Footman": {name: "Footman", maxXp: 1000, income: 50},
-    "Veteran footman": {name: "Veteran footman", maxXp: 10000, income: 120},
-    "Centenary": {name: "Centenary", maxXp: 100000, income: 300},
-    "Knight": {name: "Knight", maxXp: 1000000, income: 1000},
-    "Veteran Knight": {name: "Veteran Knight", maxXp: 7500000, income: 3000},
-    "Holy Knight": {name: "Holy Knight", maxXp: 40000000, income: 5000},
-    "Lieutenant General": {name: "Lieutenant General", maxXp: 150000000, income: 50000},
+    "Recruit": {name: "Recruit", maxXp: 100, income: 5},
+    "Paw Patrol": {name: "Paw Patrol", maxXp: 1000, income: 50},
+    "Neko Warrior": {name: "Neko Warrior", maxXp: 10000, income: 120},
+    "Catvalry": {name: "Catvalry", maxXp: 100000, income: 300},
+    "Nya Nya Knight": {name: "Nya Nya Knight", maxXp: 1000000, income: 1000},
+    "Elite Nya Nya Knight": {name: "Elite Nya Nya Knight", maxXp: 7500000, income: 3000},
+    "Divine Neko Warrior": {name: "Divine Neko Warrior", maxXp: 40000000, income: 5000},
+    "Grand Meowarshal": {name: "Grand Meowarshal", maxXp: 150000000, income: 50000},
 
-    "Student": {name: "Student", maxXp: 100000, income: 100},
-    "Apprentice Mage": {name: "Apprentice Mage", maxXp: 1000000, income: 1000},
-    "Adept Mage": {name: "Adept Mage", maxXp: 10000000, income: 9500},
-    "Master Wizard": {name: "Master Wizard", maxXp: 100000000, income: 70000},
-    "Archmage": {name: "Archmage", maxXp: 10000000000, income: 350000},
-	"Chronomancer": {name: "Chronomancer", maxXp: 2000000000000, income: 1000000},
-    "Chairman": {name: "Chairman", maxXp: 20000000000000, income: 10000000},
-	"Imperator": {name: "Imperator", maxXp: 9000000000000000, income: 60000000},
+    "Pupil": {name: "Pupil", maxXp: 100000, income: 100},
+    "Apprentice Neko Mage": {name: "Apprentice Neko Mage", maxXp: 1000000, income: 1000},
+    "Adept Neko Mage": {name: "Adept Neko Mage", maxXp: 10000000, income: 9500},
+    "Master Neko Mage": {name: "Master Neko Mage", maxXp: 100000000, income: 70000},
+    "Arch Neko Mage": {name: "Arch Neko Mage", maxXp: 10000000000, income: 350000},
+	"Nekomancer": {name: "Nekomancer", maxXp: 2000000000000, income: 1000000},
+    "College Administrator": {name: "College Administrator", maxXp: 20000000000000, income: 10000000},
+	"Grandmaster": {name: "Grandmaster", maxXp: 9000000000000000, income: 60000000},
 	
-	"Corrupted": {name: "Corrupted", maxXp: 100000000000000, income: 25000000},
-    "Void Slave": {name: "Void Slave", maxXp: 650000000000000, income: 200000000}, 
-    "Void Fiend": {name: "Void Fiend", maxXp: 18000000000000000, income: 600000000}, 
-    "Abyss Anomaly": {name: "Abyss Anomaly", maxXp: 18000000000000000, income: 1200000000}, 
-	"Void Wraith": {name: "Void Wraith", maxXp: 180000000000000000, income: 5000000000}, 
-    "Void Reaver": {name: "Void Reaver", maxXp: 2600000000000000000, income: 25000000000}, 
-	"Void Lord": {name: "Void Lord", maxXp: 28000000000000000000, income: 100000000000},
-	"Abyss God": {name: "Abyss God", maxXp: 400000000000000000000, income: 1000000000000},
+	"Angel": {name: "Angel", maxXp: 100000000000000, income: 25000000},
+    "Guardian Angel": {name: "Guardian Angel", maxXp: 650000000000000, income: 200000000}, 
+    "Archangel": {name: "Archangel", maxXp: 18000000000000000, income: 600000000}, 
+    "Seraph": {name: "Seraph", maxXp: 18000000000000000, income: 1200000000}, 
+	"Divine Wanderer": {name: "Divine Wanderer", maxXp: 180000000000000000, income: 5000000000}, 
+    "Angelic Spirit": {name: "Angelic Spirit", maxXp: 2600000000000000000, income: 25000000000}, 
+	"Hevanly Gatekeeper": {name: "Hevanly Gatekeeper", maxXp: 28000000000000000000, income: 100000000000},
+	"Guardian of the Hevans": {name: "Guardian of the Hevans", maxXp: 400000000000000000000, income: 1000000000000},
 
 
 
 
-	"Eternal Wanderer": {name: "Eternal Wanderer", maxXp: 55000000000000000000, income: 1000000000000},
-    "Nova": {name: "Nova", maxXp: 51000000000000000000, income: 3000000000000},
-    "Sigma Proioxis": {name: "Sigma Proioxis", maxXp: 500000000000000000000, income: 25000000000000},
-	"Acallaris": {name: "Acallaris", maxXp: 50000000000000000000000, income: 215000000000000},
+	"Galactic Wanderer": {name: "Galactic Wanderer", maxXp: 55000000000000000000, income: 1000000000000},
+    "Celestial Observer": {name: "Celestial Observer", maxXp: 51000000000000000000, income: 3000000000000},
+    "Demipotent": {name: "Demipotent", maxXp: 500000000000000000000, income: 25000000000000},
+	"Demigoddess": {name: "Demigoddess", maxXp: 50000000000000000000000, income: 215000000000000},
 	"One Above All": {name: "One Above All", maxXp: 5000000000000000000000000000, income: 25000000000000000},
 	
 	
@@ -87,48 +87,48 @@ const jobBaseData = {
 }
 
 const skillBaseData = {
-    "Concentration": {name: "Concentration", maxXp: 100, effect: 0.01, description: "Ability XP"},
-    "Productivity": {name: "Productivity", maxXp: 100, effect: 0.01, description: "Class XP"},
-    "Bargaining": {name: "Bargaining", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
-    "Meditation": {name: "Meditation", maxXp: 100, effect: 0.01, description: "Happiness"},
+    "Mindfulness": {name: "Mindfulness", maxXp: 100, effect: 0.01, description: "Ability XP"},
+    "Fruitfulness": {name: "Fruitfulness", maxXp: 100, effect: 0.01, description: "Class XP"},
+    "Meowing": {name: "Meowing", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
+    "Pondering": {name: "Pondering", maxXp: 100, effect: 0.01, description: "Happiness"},
 
-    "Strength": {name: "Strength", maxXp: 100, effect: 0.01, description: "Military Pay"},
-    "Battle Tactics": {name: "Battle Tactics", maxXp: 100, effect: 0.01, description: "Military XP"},
-    "Muscle Memory": {name: "Muscle Memory", maxXp: 100, effect: 0.01, description: "Strength XP"},
+    "Courage": {name: "Courage", maxXp: 100, effect: 0.01, description: "Military Pay"},
+    "Battle Mewneuvers": {name: "Battle Mewneuvers", maxXp: 100, effect: 0.01, description: "Military XP"},
+    "Pouncing": {name: "Pouncing", maxXp: 100, effect: 0.01, description: "Strength XP"},
 
-    "Mana Control": {name: "Mana Control", maxXp: 100, effect: 0.01, description: "T.A.A. XP"},
-    "Life Essence": {name: "Life Essence", maxXp: 100, effect: 0.01, description: "Longer Lifespan"},
-    "Time Warping": {name: "Time Warping", maxXp: 100, effect: 0.01, description: "Gamespeed"},
+    "Manya Control": {name: "Manya Control", maxXp: 100, effect: 0.01, description: "T.A.A. XP"},
+    "Feline Essence": {name: "Feline Essence", maxXp: 100, effect: 0.01, description: "Longer Lifespan"},
+    "Zoomy Casting": {name: "Zoomy Casting", maxXp: 100, effect: 0.01, description: "Gamespeed"},
     "Astral Body": {name: "Astral Body", maxXp: 100, effect: 0.0035, description: "Longer lifespan"},
-	"Temporal Dimension": {name: "Temporal Dimension", maxXp: 100, effect: 0.025, description: "Gamespeed"},
-	"All Seeing Eye": {name: "All Seeing Eye", maxXp: 100, effect: 0.0027, description: "T.A.A Pay"},
+	"Temporal Zoomies": {name: "Temporal Zoomies", maxXp: 100, effect: 0.025, description: "Gamespeed"},
+	"Coin Transmutation": {name: "Coin Transmutation", maxXp: 100, effect: 0.0027, description: "T.A.A Pay"},
 	"Brainwashing": {name: "Brainwashing", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
 	
 	"Absolute Wish": {name: "Absolute Wish", maxXp: 100, effect: 0.005, description: "Evil Gain"},
-    "Void Amplification": {name: "Void Amplification", maxXp: 100, effect: 0.01, description: "The Void XP"},
-    "Mind Seize": {name: "Mind Seize", maxXp: 100, effect: 0.0006, description: "Reduced Happiness"},
-	"Ceaseless Abyss": {name: "Ceaseless Abyss", maxXp: 100, effect: 0.000585, description: "Longer Lifespan"},
-	"Void Symbiosis": {name: "Void Symbiosis", maxXp: 100, effect: 0.0015, description: "Ability XP"},
+    "Angelic Amplification": {name: "Angelic Amplification", maxXp: 100, effect: 0.01, description: "The Void XP"},
+    "Enlightened Mind": {name: "Enlightened Mind", maxXp: 100, effect: 0.0006, description: "Reduced Happiness"},
+	"Ceaseless Love": {name: "Ceaseless Love", maxXp: 100, effect: 0.000585, description: "Longer Lifespan"},
+	"Divine Symbiosis": {name: "Divine Symbiosis", maxXp: 100, effect: 0.0015, description: "Ability XP"},
     "Void Embodiment": {name: "Void Embodiment", maxXp: 100, effect: 0.0025, description: "Evil Gain"},
 	"Abyss Manipulation": {name: "Abyss Manipulation", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
 	
 	
 	"Cosmic Longevity": {name: "Cosmic Longevity", maxXp: 100, effect: 0.0015, description: "Longer Lifespan"},
-    "Cosmic Recollection": {name: "Cosmic Recollection", maxXp: 100, effect: 0.00065, description: "Max Lvl Multiplier"},
-	"Essence Collector": {name: "Essence Collector", maxXp: 100, effect: 0.01, description: "Essence Gain"},
-	"Galactic Command": {name: "Galactic Command", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
+    "Eternal Recollection": {name: "Eternal Recollection", maxXp: 100, effect: 0.00065, description: "Max Lvl Multiplier"},
+	"Spectrial Ruminator": {name: "Spectrial Ruminator", maxXp: 100, effect: 0.01, description: "Essence Gain"},
+	"Eternal Tinkerer": {name: "Eternal Tinkerer", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
 	
 	
-    "Dark Influence": {name: "Dark Influence", maxXp: 100, effect: 0.01, description: "All XP"},
-    "Evil Control": {name: "Evil Control", maxXp: 100, effect: 0.01, description: "Evil Gain"},
-    "Intimidation": {name: "Intimidation", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
-    "Demon Training": {name: "Demon Training", maxXp: 100, effect: 0.01, description: "All XP"},
-    "Blood Meditation": {name: "Blood Meditation", maxXp: 100, effect: 0.01, description: "Evil Gain"},
-    "Demon's Wealth": {name: "Demon's Wealth", maxXp: 100, effect: 0.002, description: "Class Pay"},
-	"Dark Knowledge": {name: "Dark Knowledge", maxXp: 100, effect: 0.003, description: "Class XP"},
-	"Void Influence": {name: "Void Influence", maxXp: 100, effect: 0.0028, description: "All XP"},
-	"Time Loop": {name: "Time Loop", maxXp: 100, effect: 0.001, description: "Gamespeed"},
-	"Evil Incarnate": {name: "Evil Incarnate", maxXp: 100, effect: 0.0004, description: "Ability XP"},
+    "Adorable Allure": {name: "Adorable Allure", maxXp: 100, effect: 0.01, description: "All XP"},
+    "Fluff Ascension": {name: "Fluff Ascension", maxXp: 100, effect: 0.01, description: "Evil Gain"},
+    "Weaponized Cuteness": {name: "Weaponized Cuteness", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
+    "Unworldly Adorablness": {name: "Unworldly Adorablness", maxXp: 100, effect: 0.01, description: "All XP"},
+    "Sacred Plushie Ritual": {name: "Sacred Plushie Ritual", maxXp: 100, effect: 0.01, description: "Evil Gain"},
+    "Midas Paw": {name: "Midas Paw", maxXp: 100, effect: 0.002, description: "Class Pay"},
+	"Sacred Knowledge": {name: "Sacred Knowledge", maxXp: 100, effect: 0.003, description: "Class XP"},
+	"Celestial Influence": {name: "Celestial Influence", maxXp: 100, effect: 0.0028, description: "All XP"},
+	"Zoomy Looper": {name: "Zoomy Looper", maxXp: 100, effect: 0.001, description: "Gamespeed"},
+	"Cutie Incarnate": {name: "Cutie Incarnate", maxXp: 100, effect: 0.0004, description: "Ability XP"},
 	
 
     "Yin Yang": {name: "Yin Yang", maxXp: 100, effect: 0.020, description: "Essence + Evil Gain"},
@@ -139,35 +139,35 @@ const skillBaseData = {
 }
 
 const itemBaseData = {
-    "Homeless": {name: "Homeless", expense: 0, effect: 1},
-    "Tent": {name: "Tent", expense: 15, effect: 1.4},
-    "Wooden Hut": {name: "Wooden Hut", expense: 100, effect: 2},
-    "Cottage": {name: "Cottage", expense: 750, effect: 3.5},
+    "Stray": {name: "Stray", expense: 0, effect: 1},
+    "Tattered Sheets": {name: "Tattered Sheets", expense: 15, effect: 1.4},
+    "Makeshift Cat Tree": {name: "Makeshift Cat Tree", expense: 100, effect: 2},
+    "Apartment": {name: "Apartment", expense: 750, effect: 3.5},
     "House": {name: "House", expense: 3000, effect: 6},
     "Large House": {name: "Large House", expense: 25000, effect: 12},
     "Small Palace": {name: "Small Palace", expense: 300000, effect: 25},
     "Grand Palace": {name: "Grand Palace", expense: 5000000, effect: 60},
 	"Town Ruler": {name: "Town Ruler", expense: 35000000, effect: 120},
-	"City Ruler": {name: "City Ruler", expense: 1100000000, effect: 500},
-	"Nation Ruler": {name: "Nation Ruler", expense: 13000000000, effect: 1200},
-	"Pocket Dimension": {name: "Pocket Dimension", expense: 49000000000, effect: 5000},
+	"Catgirl City Ruler": {name: "Catgirl City Ruler", expense: 1100000000, effect: 500},
+	"Nyation Ruler": {name: "Nyation Ruler", expense: 13000000000, effect: 1200},
+	"Yarn Dimension": {name: "Yarn Dimension", expense: 49000000000, effect: 5000},
     "Void Realm": {name: "Void Realm", expense: 121000000000, effect: 15000},
 	"Void Universe": {name: "Void Universe", expense: 2000000000000, effect: 30000},
 	"Astral Realm": {name: "Astral Realm", expense: 160000000000000, effect: 150000},
 	"Galactic Throne": {name: "Galactic Throne", expense: 5000000000000000, effect: 300000},
 
 
-    "Book": {name: "Book", expense: 10, effect: 1.5, description: "Ability XP"},
-    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 1.5, description: "Strength XP"},
-    "Personal Squire": {name: "Personal Squire", expense: 200, effect: 2, description: "Class XP"},
-    "Steel Longsword": {name: "Steel Longsword", expense: 1000, effect: 2, description: "Military XP"},
-    "Butler": {name: "Butler", expense: 7500, effect: 1.5, description: "Happiness"},
-    "Sapphire Charm": {name: "Sapphire Charm", expense: 50000, effect: 3, description: "Magic XP"},
-    "Study Desk": {name: "Study Desk", expense: 1000000, effect: 2, description: "Ability XP"},
+    "Diary": {name: "Diary", expense: 10, effect: 1.5, description: "Ability XP"},
+    "Weighted Yarnballs": {name: "Weighted Yarnballs", expense: 50, effect: 1.5, description: "Strength XP"},
+    "Personal Assistant": {name: "Personal Assistant", expense: 200, effect: 2, description: "Class XP"},
+    "Steel Claws": {name: "Steel Claws", expense: 1000, effect: 2, description: "Military XP"},
+    "Catgirl Maid": {name: "Catgirl Maid", expense: 7500, effect: 1.5, description: "Happiness"},
+    "Transmatic Gem": {name: "Transmatic Gem", expense: 50000, effect: 3, description: "Magic XP"},
+    "Fancy Chevrette": {name: "Fancy Chevrette", expense: 1000000, effect: 2, description: "Ability XP"},
     "Library": {name: "Library", expense: 10000000, effect: 2, description: "Ability XP"},
 	"Observatory": {name: "Observatory", expense: 140000000, effect: 5, description: "Magic XP"},
 	"Mind's Eye": {name: "Mind's Eye", expense: 3250000000, effect: 10, description: "Fundamentals XP"},
-	"Void Necklace": {name: "Void Necklace", expense: 28050000000, effect: 3, description: "Void Manipulation XP"},
+	"Angelic Sapphire": {name: "Angelic Sapphire", expense: 28050000000, effect: 3, description: "Void Manipulation XP"},
     "Void Armor": {name: "Void Armor", expense: 197050000000, effect: 3, description: "The Void XP"},
 	"Void Blade": {name: "Void Blade", expense: 502050000000, effect: 3, description: "Ability XP"},
 	"Void Orb": {name: "Void Orb", expense: 1202050000000, effect: 3, description: "Void Manipulation XP"},
@@ -179,39 +179,39 @@ const itemBaseData = {
 }
 
 const jobCategories = {
-    "Common work"            : ["Beggar", "Farmer", "Fisherman", "Miner", "Blacksmith", "Merchant"],
-    "Military"               : ["Squire", "Footman", "Veteran footman", "Centenary", "Knight", "Veteran Knight", "Holy Knight", "Lieutenant General"],
-    "The Arcane Association" : ["Student", "Apprentice Mage", "Adept Mage", "Master Wizard", "Archmage", "Chronomancer", "Chairman", "Imperator"],
-	"The Void"               : ["Corrupted", "Void Slave", "Void Fiend", "Abyss Anomaly", "Void Wraith", "Void Reaver", "Void Lord", "Abyss God"],
-    "Galactic Council"       : ["Eternal Wanderer", "Nova", "Sigma Proioxis", "Acallaris", "One Above All"]
+    "Catgirl Work"            : ["Scrounger", "Catnip Farmer", "Maid", "Catgirl Cafe Waitress", "Sushi Chef", "Business Catgirl"],
+    "The Mewarine Corps"               : ["Recruit", "Paw Patrol", "Neko Warrior", "Catvalry", "Nya Nya Knight", "Elite Nya Nya Knight", "Divine Neko Warrior", "Grand Meowarshal"],
+    "Meowgic Arcanium" : ["Pupil", "Apprentice Neko Mage", "Adept Neko Mage", "Master Neko Mage", "Arch Neko Mage", "Nekomancer", "College Administrator", "Grandmaster"],
+	"The Void"               : ["Angel", "Guardian Angel", "Archangel", "Seraph", "Divine Wanderer", "Angelic Spirit", "Hevanly Gatekeeper", "Guardian of the Hevans"],
+    "Galactic Council"       : ["Galactic Wanderer", "Celestial Observer", "Demipotent", "Demigoddess", "One Above All"]
 
 }
 
 const skillCategories = {
-    "Fundamentals"           : ["Concentration", "Productivity", "Bargaining", "Meditation"],
-    "Combat"                 : ["Strength", "Battle Tactics", "Muscle Memory"],
-    "Magic"                  : ["Mana Control", "Life Essence", "Time Warping", "Astral Body", "Temporal Dimension", "All Seeing Eye", "Brainwashing"],
-    "Dark Magic"             : ["Dark Influence", "Evil Control", "Intimidation", "Demon Training", "Blood Meditation", "Demon's Wealth", "Dark Knowledge", "Void Influence", "Time Loop", "Evil Incarnate"],
-	"Void Manipulation"      : ["Absolute Wish", "Void Amplification", "Mind Seize", "Ceaseless Abyss", "Void Symbiosis", "Void Embodiment", "Abyss Manipulation"],
-	"Celestial Powers"       : ["Cosmic Longevity", "Cosmic Recollection", "Essence Collector", "Galactic Command"],
+    "Catgirl Fundmentals"           : ["Mindfulness", "Fruitfulness", "Meowing", "Pondering"],
+    "Combat"                 : ["Courage", "Battle Mewneuvers", "Pouncing"],
+    "Catgirl Magic"                  : ["Manya Control", "Feline Essence", "Zoomy Casting", "Astral Body", "Temporal Zoomies", "Coin Transmutation", "Brainwashing"],
+    "Dark Magic"             : ["Adorable Allure", "Fluff Ascension", "Weaponized Cuteness", "Unworldly Adorablness", "Sacred Plushie Ritual", "Midas Paw", "Sacred Knowledge", "Celestial Influence", "Zoomy Looper", "Cutie Incarnate"],
+	"Void Manipulation"      : ["Absolute Wish", "Angelic Amplification", "Enlightened Mind", "Ceaseless Love", "Divine Symbiosis", "Void Embodiment", "Abyss Manipulation"],
+	"Celestial Powers"       : ["Cosmic Longevity", "Eternal Recollection", "Spectrial Ruminator", "Eternal Tinkerer"],
 	"Almightiness"           : ["Yin Yang", "Parallel Universe", "Higher Dimensions", "Epiphany"]
 	
 }
 
 const itemCategories = {
-    "Properties"             : ["Homeless", "Tent", "Wooden Hut", "Cottage", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "City Ruler", "Nation Ruler", "Pocket Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
-    "Misc"                   : ["Book", "Dumbbells", "Personal Squire", "Steel Longsword", "Butler", "Sapphire Charm", "Study Desk", "Library", "Observatory", "Mind's Eye", "Void Necklace", "Void Armor", "Void Blade", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
+    "Properties"             : ["Stray", "Tattered Sheets", "Makeshift Cat Tree", "Apartment", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "Catgirl City Ruler", "Nyation Ruler", "Yarn Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
+    "Misc"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Void Armor", "Void Blade", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
 }
 
 const headerRowColors = {
-    "Common work": "#55a630",
-    "Military": "#e63946",
-    "The Arcane Association": "#C71585",
+    "Catgirl Work": "#407d24",
+    "The Mewarine Corps": "#a82a34",
+    "The Nekomage Guild": "#C71585",
 	"The Void": "#762B91",
     "Galactic Council": "#D5C010",
-    "Fundamentals": "#55a630",
+    "Catgirl Fundmentals": "#55a630",
     "Combat": "#e63946",
-    "Magic": "#C71585",
+    "Catgirl Magic": "#C71585",
     "Dark Magic": "#73000f",
 	"Almightiness": "#18d2d9",
 	"Void Manipulation": "#762B91",
@@ -222,97 +222,97 @@ const headerRowColors = {
 
 const tooltips = {
 	//Common work
-    "Beggar": "Struggle day and night for a couple of copper coins. It feels like you are at the brink of death each day.",
-    "Farmer": "Plow the fields and grow the crops. It's not much but it's honest work.",
-    "Fisherman": "Reel in various fish and sell them for a handful of coins. A relaxing but still a poor paying job.",
-    "Miner": "Delve into dangerous caverns and mine valuable ores. The pay is quite meager compared to the risk involved.",
-    "Blacksmith": "Smelt ores and carefully forge weapons for the military. A respectable and OK paying commoner job.",
-    "Merchant": "Travel from town to town, bartering fine goods. The job pays decently well and is a lot less manually-intensive.",
+    "Scrounger": "Meow and beg day and night for a couple of copper coins. It feels like you are at the brink of death each day.",
+    "Catnip Farmer": "Plow the fields and grow the catnip for the local cat folks. It's not much but it's honest work.",
+    "Maid": "Work for a demanding master keeping their house clean and cooking them three square meals a day. A stressful and still a poor paying job.",
+    "Catgirl Cafe Waitress": "Make coffee and tea for the local business catfolks. The pay is quite meager but its better than being a maid.",
+    "Sushi Chef": "Make delecious sushi rolls for the local business catfolks. A respectable and fun job for any catgirl.",
+    "Business Catgirl": "Travel from town to town opening your laptop and mashing keys randomly. The job pays decently well and you get to be the boss.",
 	
     //Military
-    "Squire": "Carry around your knight's shield and sword along the battlefield. Very meager pay but the work experience is quite valuable.",
-    "Footman": "Put down your life to battle with enemy soldiers. A courageous, respectable job but you are still worthless in the grand scheme of things.",
-    "Veteran footman": "More experienced and useful than the average footman, take out the enemy forces in battle with your might. The pay is not that bad.",
-    "Centenary": "By proving your skills with a bow, you were appointed to lead a small group of archers to ambush your enemies from a distance.",
-    "Knight": "Slash and pierce through enemy soldiers with ease, while covered in steel from head to toe. A decently paying and very respectable job.",
-    "Veteran Knight": "Utilising your unmatched combat ability, slaugher enemies effortlessly. Most footmen in the military would never be able to acquire such a well paying job like this.",
-    "Holy Knight": "Obliterate squadrons of enemy soldiers in one go with extraordinary proficiency, while equipped magically imbued blade. Such a feared unit on the battlefield is paid extremely well.",
-    "Lieutenant General": "Feared by nations, obliterate entire armies in a blink of an eye. Roughly every century, only one holy knight is worthy of receiving such an esteemed title.",
+    "Recruit": "Learn the basics of pouncing and slashing with your claws. Dangerous training for low pay but every catgirl warrior starts somewhere.",
+    "Paw Patrol": "Put your life on the line to battle with enemy puppygirls. A courageous, respectable job but you are still a nobody in the grand scheme of things.",
+    "Neko Warrior": "More experienced and useful than the average Paw Patrol Catfolk, take out the enemy puppygirls in battle with your catgirl prowess. The pay is not that bad but the glory is better.",
+    "Catvalry": "By proving your skills with your claws, you were appointed to lead a small group of stealth catgirls to ambush enemy puppygirls by surpise.",
+    "Nya Nya Knight": "Slash and claw through enemy puppygirls with ease, while covered in steel from head to toe. A decently paying and very respectable job.",
+    "Elite Nya Nya Knight": "Utilising your unmatched combat ability, defeat enemy puppygirls effortlessly. Most catgirls in the military would never be able to acquire a title such as this.",
+    "Divine Neko Warrior": "Obliterate squadrons of enemy puppygirls in one go with extraordinary catlike proficiency, while equipped with magically imbued claws. Such a feared catgirl on the battlefield is highly respected and paid extremely well.",
+    "Grand Meowarshal": "Feared by all puppygirl nations, obliterate entire armies of puppygirls in a blink of an eye. Roughly every century, only one Divine Neko Warrior is worthy of receiving such a legendary title.",
 
     //The Arcane Association
-    "Student": "Study the theory of mana and practice basic spells. There is minor pay to cover living costs, however, this is a necessary stage in becoming a mage.",
-    "Apprentice Mage": "Under the supervision of a skilled mage, perform basic spells against enemies in battle. Generous pay will be provided to cover living costs.",
-    "Adept Mage": "Turn the tides of battle through casting intermediate spells and mentor other apprentices. The pay for this particular job is extremely high.",
-    "Master Wizard": "Utilise advanced spells to ravage and destroy entire legions of enemy soldiers. Only a small percentage of mages deserve to attain this role and are rewarded with an insanely high pay.",
-    "Archmage": "Blessed with unparalleled talent, perform unbelievable feats with magic at will. It is said that an archamge has enough destructive power to wipe an empire off the map.",
-	"Chronomancer": "Specialize in harnessing temporal energies that alter the flow of time with supernatural divinations and otherwordly expertise.",
-    "Chairman": "Spend your days administrating The Arcane Association and investigate the concepts of true immortality. The chairman receives ludicrous amounts of pay daily.",
-	"Imperator": "You wield an unlimited power, making you unstoppable. By ruling with an iron fist, everyone in the Arcane Association has to obey your commands.",
+    "Pupil": "Study the theory of mana and practice basic catgirl spells. There is minor pay to cover living costs, however, this is a necessary stage in becoming a Neko Mage.",
+    "Apprentice Neko Mage": "Under the supervision of a skilled mage, perform basic spells against enemies in battle. Generous pay will be provided to cover living costs.",
+    "Adept Neko Mage": "Turn the tides of battle through casting intermediate spells and mentor other apprentices. The pay for this particular job is extremely high.",
+    "Master Neko Mage": "Utilise advanced spells to ravage and destroy entire legions of enemy soldiers. Only a small percentage of mages deserve to attain this role and are rewarded with an insanely high pay.",
+    "Arch Neko Mage": "Blessed with unparalleled talent, perform unbelievable feats with magic at will. It is said that an archamge has enough destructive power to wipe an empire off the map.",
+	"Nekomancer": "Specialize in harnessing temporal zoomy energies that alter the flow of time with supernatural divinations and otherwordly expertise.",
+    "College Administrator": "Spend your days administrating Meowgic Arcanium and investigate the concepts of forbidden catgirl magic. The Administrator receives ludicrous amounts of pay daily.",
+	"Grandmaster": "You wield truly unlimited power as a mortal, making you nearly unstoppable. By ruling with a heart of gold, everyone in the Catgirl College obeys your lessons & commands.",
 
     //The Void
-    "Corrupted": "Corrupted by Void, you are slowly turning into a slave with no free will, just to serve the Void for the rest of eternity... Can you resist it, or will it consume you forever?",
-    "Void Slave": "Each day you are succumbing to the Void more and more, can you hold to your humanity for a bit longer, or will you let it devour you?",
-    "Void Fiend": "You become an inquisitive yet putrid creature that siphons life from everything around you.",
-	"Abyss Anomaly": "Screaming into existence, you become a manifestation of the unknowable nothingness that lies beyond.",
-	"Void Wraith": "Damned soul... a shadow of your former self, lingering between realms and consumed by void... can you ever find peace?",
-	"Void Reaver": "There are few who may tread the paths between worlds, these powers grant you an ability to generate fields of void energy that devour all living things.",
-	"Void Lord": "You gazed into the dark heart of the Void long enough to become one of the most powerful and feared beings, all lesser void creatures are at your command.",
-	"Abyss God": "Creator of the Void, a vast canvas of blackness and nothingness, in which the concept of its existence defies all logic, nothing will escape you.",
+    "Angel": "Corrupted by Void, you are slowly turning into a slave with no free will, just to serve the Void for the rest of eternity... Can you resist it, or will it consume you forever?",
+    "Guardian Angel": "Each day you are succumbing to the Void more and more, can you hold to your humanity for a bit longer, or will you let it devour you?",
+    "Archangel": "You become an inquisitive yet putrid creature that siphons life from everything around you.",
+	"Seraph": "Screaming into existence, you become a manifestation of the unknowable nothingness that lies beyond.",
+	"Divine Wanderer": "Damned soul... a shadow of your former self, lingering between realms and consumed by void... can you ever find peace?",
+	"Angelic Spirit": "There are few who may tread the paths between worlds, these powers grant you an ability to generate fields of void energy that devour all living things.",
+	"Hevanly Gatekeeper": "You gazed into the dark heart of the Void long enough to become one of the most powerful and feared beings, all lesser void creatures are at your command.",
+	"Guardian of the Hevans": "Creator of the Void, a vast canvas of blackness and nothingness, in which the concept of its existence defies all logic, nothing will escape you.",
  
     //Galactic Council
-    "Eternal Wanderer": "With the powers bestowed upon you by an unknown entity you wander around, visiting places revered and feared in search of answers.",
-    "Nova": "Extremely powerful being with tremedous telekinetic powers and the ability to rearrange the molecular structure of matter and energy, even up to cosmic scale.",
-	"Sigma Proioxis": "A nigh-omnipotent cosmological entity, with vast matter and energy manipulation abilities that help you push the boundaries of the Universe itself.",
-    "Acallaris": "Primordial being that predate the universe, involved with the creation of life and powerful beyond mortal comprehension, existing as myths to the oldest species in the universe.",
-	"One Above All": "Creator of everything.",
+    "Galactic Wanderer": "With the powers bestowed upon you by an unknown entity you wander around, visiting places revered and feared in search of answers.",
+    "Celestial Observer": "Extremely powerful being with tremedous telekinetic powers and the ability to rearrange the molecular structure of matter and energy, even up to cosmic scale.",
+	"Demipotent": "A nigh-omnipotent cosmological entity, with vast matter and energy manipulation abilities that help you push the boundaries of the Universe itself.",
+    "Demigoddess": "Primordial being that predate the universe, involved with the creation of life and powerful beyond mortal comprehension, existing as myths to the oldest species in the universe.",
+	"One Above All": "You have become the catgirl creator of everything, a literal god in control of all aspects of the universe. Perhaps maybe you always were a god? Maybe you had simply lost your way or choose to be a mortal for a short time. No matter how it happend or what led you here, you sit upon your throne overseeing the entire universe until the end of time.",
 	
 
     //Fundamentals
-    "Concentration": "Improve your learning speed through practising intense concentration activities.",
-    "Productivity": "Learn to procrastinate less at work and receive more job experience per day.",
-    "Bargaining": "Study the tricks of the trade and persuasive skills to lower any type of expense.",
-    "Meditation": "Fill your mind with peace and tranquility to tap into greater happiness from within.",
+    "Mindfulness": "Improve your learning speed by learning to pay more attention to stuffs.",
+    "Fruitfulness": "Learn to randomly bat things around less at work and receive more job experience per day.",
+    "Meowing": "Study the tricks of the being an adorable and persuasive catgirl to lower any type of expense.",
+    "Pondering": "Fill your mind with peace and tranquility to tap into greater happiness from within.",
 
     //Combat
-    "Strength": "Condition your body and strength through harsh training. Stronger individuals are paid more in the military.",
-    "Battle Tactics": "Create and revise battle strategies, improving experience gained in the military.",
-    "Muscle Memory": "Strengthen your neurons through habit and repetition, improving strength gains throughout the body.",
+    "Courage": "Channel your inner catgirl and become more brave and strong through training. Couragous catgirls are paid more in The Mewarine Corps.",
+    "Battle Mewneuvers": "Create and revise pouncing strategies, improving experience gained in The Mewarine Corps.",
+    "Pouncing": "Strengthen your endurance through habit and repetition, making you feel more courage throughout your body.",
 
     //Magic
-    "Mana Control": "Strengthen your mana channels throughout your body, aiding you in becoming a more powerful magical user.",
-    "Life Essence": "Lengthen your lifespan through the means of magic. However, is this truly the immortality you have tried seeking for...?",
-    "Time Warping": "Bend space and time through forbidden techniques, speeding up your learning processes.",
-    "Astral Body": "Lengthen your lifespan drastically beyond comprehension by harnessing ethereal energy.",
-	"Temporal Dimension": "Creating your own pocket dimension where centuries go by in mere seconds.",
-	"All Seeing Eye": "As the highest rank of T.A.A, all funds go directly to you.",
+    "Manya Control": "Strengthen your mana channels throughout your body, aiding you in becoming a more powerful magical user.",
+    "Feline Essence": "Lengthen your lifespan through the means of forbidden catgirl magic. Could this be the key to the immortality you seek?",
+    "Zoomy Casting": "Bend space and time through forbidden catgirl magic, speeding up both your physical skills and quickining your learning processes.",
+    "Astral Body": "Lengthen your lifespan drastically beyond comprehension by harnessing ethereal catgirl energy. Perhaps this could be the answer you are looking for...",
+	"Temporal Zoomies": "Run so fast you create your own pocket dimension where centuries go by in mere seconds.",
+	"Coin Transmutation": "As the highest ranking member of the Catgirl Magic College, gain access forbidden transmutation spells to gain additional funds to further your skills and research.",
 	"Brainwashing": "A technique designed to manipulate human thought and action against their desire.",
 
      //Dark magic - Evil Required
-    "Dark Influence": "Encompass yourself with formidable power bestowed upon you by evil, allowing you to pick up and absorb any job or skill with ease.",
-    "Evil Control": "Tame the raging and growing evil within you, improving evil gain in-between rebirths.",
-    "Intimidation": "Learn to emit a devilish aura which strikes extreme fear into other merchants, forcing them to give you heavy discounts.",
-    "Demon Training": "A mere human body is too feeble and weak to withstand evil. Train with forbidden methods to slowly manifest into a demon, capable of absorbing knowledge rapidly.",
-    "Blood Meditation": "Grow and culture the evil within you through the sacrifise of other living beings, drastically increasing evil gain.",
-    "Demon's Wealth": "Through the means of dark magic, multiply the raw matter of the coins you receive from your job.",
-	"Dark Knowledge": "Sealed for a very long time, you utilized these forbidden texts for your own personal gain.",
-	"Void Influence": "Tapping into the powers of the Void while combining them with evil grants you an ulimited potential.",
-	"Time Loop": "Mastery is achieved when 'telling time' becomes 'telling time what to do'.",
-	"Evil Incarnate": "You have became the very thing you swore to destroy.",
+    "Adorable Allure": "Surround yourself with an irresistible aura of cuteness, convincing others to teach you any job or skill with ease.",
+    "Fluff Ascension": "Through the means of magic you have learned to improve the softness of your fur, improving your cuteness gains between rebirths.",
+    "Weaponized Cuteness": "Emit an overwhelmingly adorable aura that leaves merchants powerless to resist giving you heavy discounts.",
+    "Unworldly Adorablness": "A mere catgirl body isn't enough to fit your adorable potential. Focus your energy to transform into a creature of unfathonamble cuteness and gain additional experience to all your skills.",
+    "Sacred Plushie Ritual": "Perform a sacred ritual with your plushies allowing you to harness their energy to gain more cuteness between rebiths.",
+    "Midas Paw": "Through the means of cutie magic, coins magically multiply when they touch your hands, giving you more earnings from work.",
+	"Sacred Knowledge": "Sealed for a very long time in an ancient ruin, you utilized these forbidden texts for your own personal gain.",
+	"Celestial Influence": "Tapping into the powers of the pure good while combining them with cuteness grants you an ulimited potential.",
+	"Zoomy Looper": "Focus your magical cutie energy to enhance your speed even further, giving you nearly unlimited control over time itself.",
+	"Cutie Incarnate": "You have became the essence of adorablness. No other creature could ever possibly attain this level of cuteness.",
 	
 	//Void Manipulation
 	"Absolute Wish": "The power to fulfill absolutely any and all wishes without any limitations.",
-    "Void Amplification": "You surrender yourself to the Void, making it easier to take control of you.",
-    "Mind Seize": "In a trance like state, you feel the Void controlling your thoughts, perception, memories, emotions and personality.",
-	"Ceaseless Abyss": "Never ending torture, you swore to serve the Void for the rest of your existence.",
-	"Void Symbiosis": "A symbiotic relationship that helps you become one with the Void.",
+    "Angelic Amplification": "You surrender yourself to the Void, making it easier to take control of you.",
+    "Enlightened Mind": "In a trance like state, you feel the Void controlling your thoughts, perception, memories, emotions and personality.",
+	"Ceaseless Love": "Never ending torture, you swore to serve the Void for the rest of your existence.",
+	"Divine Symbiosis": "A symbiotic relationship that helps you become one with the Void.",
 	"Void Embodiment": "If thou gaze long into an abyss, the abyss will also gaze into thee.",
 	"Abyss Manipulation": "Allows you to shape your own reality within the Void itself.",
 	
 	//Celestial Powers - Endgame
 	"Cosmic Longevity": "You have seen it all, from the very beginning to the very end.",
-	"Cosmic Recollection": "Being able to exist in multiple parallel timelines and manipulating you parallel selves, influencing their lives as you see fit.",
-	"Essence Collector": "Exploit the unlimited potential of multiverse energies and collect its resources.",
-	"Galactic Command": "Absolute power corrupts absolutely.",
+	"Eternal Recollection": "Being able to exist in multiple parallel timelines and manipulating you parallel selves, influencing their lives as you see fit.",
+	"Spectrial Ruminator": "Exploit the unlimited potential of multiverse energies and collect its resources.",
+	"Eternal Tinkerer": "Absolute power corrupts absolutely.",
 	
 	//Almightiness
 	"Yin Yang": "Born from chaos when the universe was first created, believed to exist in harmony, balancing evil and good.",
@@ -321,35 +321,35 @@ const tooltips = {
 	"Epiphany": "You become one with everything.",
 	
     //Properties
-    "Homeless": "Sleep on the uncomfortable, filthy streets while almost freezing to death every night. It cannot get any worse than this.",
-    "Tent": "A thin sheet of tattered cloth held up by a couple of feeble, wooden sticks. Horrible living conditions but at least you have a roof over your head.",
-    "Wooden Hut": "Shabby logs and dirty hay glued together with horse manure. Much more sturdy than a tent, however, the stench isn't very pleasant.",
-    "Cottage": "Structured with a timber frame and a thatched roof. Provides decent living conditions for a fair price.",
+    "Stray": "Sleep on the uncomfortable, filthy streets while being chased away by the locals every night. It cannot get any worse than this.",
+    "Tattered Sheets": "A thin sheet of tattered cloth bunched into a ball to make a soft place to sleep. Horrible living conditions but at least you have something soft to rest on.",
+    "Makeshift Cat Tree": "Shabby logs and dirty carpet stuck together with something you hope is glue. Much warmer and safer than sheets, however, the stench from that glue isn't very pleasant.",
+    "Apartment": "A very small but suitable space for any creature. Provides decent living conditions for a fair price.",
     "House": "A building formed from stone bricks and sturdy timber, which contains a few rooms. Although quite expensive, it is a comfortable abode.",
     "Large House": "Much larger than a regular house, which boasts even more rooms and multiple floors. The building is quite spacious but comes with a hefty price tag.",
     "Small Palace": "A very rich and meticulously built structure rimmed with fine metals such as silver. Extremely high expenses to maintain for a lavish lifestyle.",
-    "Grand Palace": "A grand residence completely composed of gold and silver. Provides the utmost luxurious and comfortable living conditions possible for a ludicrous price.",
-	"Town Ruler": "You rule your very own community in your small town, owning multiple establishments.",
-    "City Ruler": "As the highest ranking official, you manage and oversee everything that happens, while your pay is astronomical, so are your expenses.",
-	"Nation Ruler": "You reign the whole nation, while your riches may be corrupted, everything you see belongs to you.",
-	"Pocket Dimension": "A Dimension just for you, that can be summoned at will. What happens there stays there.",
+    "Grand Palace": "A grand residence completely composed of gold and silver. Provides the utmost luxurious and comfortable living conditions possible for a insane price.",
+	"Town Ruler": "Your fame and wealth gives you power to rule your very own catgirl community in your small town, owning multiple establishments.",
+    "Catgirl City Ruler": "As the highest ranking official, you manage and oversee everything that happens in Catgirl City and live in a luxurious manor, while your pay is astronomical, so are your expenses.",
+	"Nyation Ruler": "You reign as supreme catgirl over the whole nation and live inside the grand palace, while your riches and power may plentiful, running an entire nyation of is mind bogglingly expensive.",
+	"Yarn Dimension": "A dimension just for you filled with endless balls of yarn and other catgirl toys that can be summoned at will. Maintaining such a powerful illusion comes with unfathomable costs.",
 	"Void Realm": "Unknown how or when the Void realm came into existence, containing elements which don’t exist outside of its dimensional plane are now all to your disposal",
 	"Void Universe": "Predating our own universe, the Void has an ulimited amount of space for your belongings, if you are willing to submit to it.",
 	"Astral Realm": "Beneath personality and ego lays the source of our deep character, our personhood. Here are the psychic senses, our deep mind and emotions, symbols and inner reality.",
 	"Galactic Throne": "You sit on your throne, overseeing the existence itself.", 
 
     //Misc
-    "Book": "A place to write down all your thoughts and discoveries, allowing you to learn a lot more quickly.",
-    "Dumbbells": "Heavy tools used in strenuous exercise to toughen up and accumulate strength even faster than before. ",
-    "Personal Squire": "Assists you in completing day to day activities, giving you more time to be productive at work.",
-    "Steel Longsword": "A fine blade used to slay enemies even quicker in combat and therefore gain more experience.",
-    "Butler": "Keeps your household clean at all times and also prepares three delicious meals per day, leaving you in a happier, stress-free mood.",
-    "Sapphire Charm": "Embedded with a rare sapphire, this charm activates more mana channels within your body, providing a much easier time learning magic.",
-    "Study Desk": "A dedicated area which provides many fine stationary and equipment designed for furthering your progress in research.",
-    "Library": "Stores a collection of books, each containing vast amounts of information from basic life skills to complex magic spells.",
-	"Observatory": "Used for observing terrestrial, marine and celestial events.",
+    "Diary": "A place to write down all your thoughts and dreams, allowing you to learn a lot more quickly.",
+    "Weighted Yarnballs": "Heavy yarnballs used in strenuous exercise to toughen up and accumulate courage even faster than before. ",
+    "Personal Assistant": "Assists you in completing day to day activities, giving you more time to be productive at work... or pretend too~ :3",
+    "Steel Claws": "A fine set of steel claws used to defeat enemy puppgirls even quicker in combat and gain more military experience. Keeping these maintained won't be cheap...",
+    "Catgirl Maid": "Keeps your household clean at all times and also prepares three delicious meals per day, leaving you in a happier, stress-free mood.",
+    "Transmatic Gem": "Embedded with a rare gem that shimmers blue, pink & white, this charm activates more mana channels within your body, enhancing the learning of catgirl magic.",
+    "Fancy Chevrette": "A fancy desk area which provides many fine stationary and equipment designed for furthering your progress in research. Keeping the desk supplied comes with a heavy cost.",
+    "Library": "Stores a collection of books, each containing vast amounts of information from basic life skills to complex catgirl magic spells. The age of some of these tomes is fragile, increasing the costs to store and maintain them properly.",
+	"Observatory": "With new access to wealth comes new opportunities to study. Rent an Observatory for studying terrestrial, marine and celestial events.",
 	"Mind's Eye": "Lets you see memories, remember images, and even see new pictures and ideas.",
-	"Void Necklace": "Helps you shape and manipulate void matter, even transmute it and rebuild into anything of your choosing.",
+	"Angelic Sapphire": "Helps you shape and manipulate matter, even transmute it and rebuild into anything of your choosing.",
 	"Void Armor": "Generates an innate armor as a part of you body, which is resistant to attacks, harm or pain.",
 	"Void Blade": "Forged from void dust and dark matter, can slash through dimensional barriers. It's a weapon of choice for every Void Reaver.",
 	"Void Orb": "When the orb touches non void entities, it instantly disintegrate them. Harnessing its power from Void realm.",
@@ -386,50 +386,50 @@ function addMultipliers() {
 
         task.xpMultipliers.push(task.getMaxLevelMultiplier.bind(task))
         task.xpMultipliers.push(getHappiness)
-        task.xpMultipliers.push(getBindedTaskEffect("Dark Influence"))
-        task.xpMultipliers.push(getBindedTaskEffect("Demon Training"))
-		task.xpMultipliers.push(getBindedTaskEffect("Void Influence"))
+        task.xpMultipliers.push(getBindedTaskEffect("Adorable Allure"))
+        task.xpMultipliers.push(getBindedTaskEffect("Unworldly Adorablness"))
+		task.xpMultipliers.push(getBindedTaskEffect("Celestial Influence"))
 		task.xpMultipliers.push(getBindedTaskEffect("Parallel Universe"))
 
         if (task instanceof Job) {
             task.incomeMultipliers.push(task.getLevelMultiplier.bind(task))
-            task.incomeMultipliers.push(getBindedTaskEffect("Demon's Wealth"))
-            task.xpMultipliers.push(getBindedTaskEffect("Productivity"))
-			task.xpMultipliers.push(getBindedTaskEffect("Dark Knowledge"))
-            task.xpMultipliers.push(getBindedItemEffect("Personal Squire"))    
+            task.incomeMultipliers.push(getBindedTaskEffect("Midas Paw"))
+            task.xpMultipliers.push(getBindedTaskEffect("Fruitfulness"))
+			task.xpMultipliers.push(getBindedTaskEffect("Sacred Knowledge"))
+            task.xpMultipliers.push(getBindedItemEffect("Personal Assistant"))    
         } else if (task instanceof Skill) {
-            task.xpMultipliers.push(getBindedTaskEffect("Concentration"))
-            task.xpMultipliers.push(getBindedItemEffect("Book"))
-            task.xpMultipliers.push(getBindedItemEffect("Study Desk"))
+            task.xpMultipliers.push(getBindedTaskEffect("Mindfulness"))
+            task.xpMultipliers.push(getBindedItemEffect("Diary"))
+            task.xpMultipliers.push(getBindedItemEffect("Fancy Chevrette"))
             task.xpMultipliers.push(getBindedItemEffect("Library"))
 			task.xpMultipliers.push(getBindedItemEffect("Void Blade"))
-			task.xpMultipliers.push(getBindedTaskEffect("Void Symbiosis"))
+			task.xpMultipliers.push(getBindedTaskEffect("Divine Symbiosis"))
 			task.xpMultipliers.push(getBindedItemEffect("Universe Fragment"))
-			task.xpMultipliers.push(getBindedTaskEffect("Evil Incarnate"))
+			task.xpMultipliers.push(getBindedTaskEffect("Cutie Incarnate"))
 			
 
 		
 		
         }
 
-        if (jobCategories["Military"].includes(task.name)) {
-            task.incomeMultipliers.push(getBindedTaskEffect("Strength"))
-            task.xpMultipliers.push(getBindedTaskEffect("Battle Tactics"))
-            task.xpMultipliers.push(getBindedItemEffect("Steel Longsword"))
-        } else if (task.name == "Strength") {
-            task.xpMultipliers.push(getBindedTaskEffect("Muscle Memory"))
-            task.xpMultipliers.push(getBindedItemEffect("Dumbbells"))
-        } else if (skillCategories["Magic"].includes(task.name)) {
-            task.xpMultipliers.push(getBindedItemEffect("Sapphire Charm"))
+        if (jobCategories["The Mewarine Corps"].includes(task.name)) {
+            task.incomeMultipliers.push(getBindedTaskEffect("Courage"))
+            task.xpMultipliers.push(getBindedTaskEffect("Battle Mewneuvers"))
+            task.xpMultipliers.push(getBindedItemEffect("Steel Claws"))
+        } else if (task.name == "Courage") {
+            task.xpMultipliers.push(getBindedTaskEffect("Pouncing"))
+            task.xpMultipliers.push(getBindedItemEffect("Weighted Yarnballs"))
+        } else if (skillCategories["Catgirl Magic"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedItemEffect("Transmatic Gem"))
 			task.xpMultipliers.push(getBindedItemEffect("Observatory"))
 	    } else if (skillCategories["Void Manipulation"].includes(task.name)) {
-            task.xpMultipliers.push(getBindedItemEffect("Void Necklace"))
+            task.xpMultipliers.push(getBindedItemEffect("Angelic Sapphire"))
 			task.xpMultipliers.push(getBindedItemEffect("Void Orb"))
-        } else if (jobCategories["The Arcane Association"].includes(task.name)) {
-            task.xpMultipliers.push(getBindedTaskEffect("Mana Control"))
-			task.incomeMultipliers.push(getBindedTaskEffect("All Seeing Eye"))	
+        } else if (jobCategories["Meowgic Arcanium"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedTaskEffect("Manya Control"))
+			task.incomeMultipliers.push(getBindedTaskEffect("Coin Transmutation"))	
 	    } else if (jobCategories["The Void"].includes(task.name)) {
-            task.xpMultipliers.push(getBindedTaskEffect("Void Amplification"))
+            task.xpMultipliers.push(getBindedTaskEffect("Angelic Amplification"))
 			task.xpMultipliers.push(getBindedItemEffect("Void Armor"))
 			task.xpMultipliers.push(getBindedItemEffect("Void Dust"))
 		} else if (jobCategories["Galactic Council"].includes(task.name)) {
@@ -439,7 +439,7 @@ function addMultipliers() {
             task.xpMultipliers.push(getEvil)
         } else if (skillCategories["Almightiness"].includes(task.name)) {
 			task.xpMultipliers.push(getEssence)
-        } else if (skillCategories["Fundamentals"].includes(task.name)) {
+        } else if (skillCategories["Catgirl Fundmentals"].includes(task.name)) {
 			task.xpMultipliers.push(getBindedItemEffect("Mind's Eye"))
 		}	
     }
@@ -447,23 +447,23 @@ function addMultipliers() {
     for (itemName in gameData.itemData) {
         var item = gameData.itemData[itemName]
         item.expenseMultipliers = []
-        item.expenseMultipliers.push(getBindedTaskEffect("Bargaining"))
-        item.expenseMultipliers.push(getBindedTaskEffect("Intimidation"))
+        item.expenseMultipliers.push(getBindedTaskEffect("Meowing"))
+        item.expenseMultipliers.push(getBindedTaskEffect("Weaponized Cuteness"))
 		item.expenseMultipliers.push(getBindedTaskEffect("Brainwashing"))
 		item.expenseMultipliers.push(getBindedTaskEffect("Abyss Manipulation"))
-		item.expenseMultipliers.push(getBindedTaskEffect("Galactic Command"))
+		item.expenseMultipliers.push(getBindedTaskEffect("Eternal Tinkerer"))
     }
 }
 
 function setCustomEffects() {
-    var bargaining = gameData.taskData["Bargaining"]
+    var bargaining = gameData.taskData["Meowing"]
     bargaining.getEffect = function() {
         var multiplier = 1 - getBaseLog(7, bargaining.level + 1) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
 
-    var intimidation = gameData.taskData["Intimidation"]
+    var intimidation = gameData.taskData["Weaponized Cuteness"]
     intimidation.getEffect = function() {
         var multiplier = 1 - getBaseLog(7, intimidation.level + 1) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
@@ -484,7 +484,7 @@ function setCustomEffects() {
         return multiplier
     }
 
-    var galacticCommand = gameData.taskData["Galactic Command"]
+    var galacticCommand = gameData.taskData["Eternal Tinkerer"]
     galacticCommand.getEffect = function() {
         var multiplier = 1 - getBaseLog(7, galacticCommand.level + 1) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
@@ -492,19 +492,19 @@ function setCustomEffects() {
     }
 
 
-    var timeWarping = gameData.taskData["Time Warping"]
+    var timeWarping = gameData.taskData["Zoomy Casting"]
     timeWarping.getEffect = function() {
         var multiplier = 1 + getBaseLog(13, timeWarping.level + 1) 
         return multiplier
     }
 
-    var immortality = gameData.taskData["Life Essence"]
+    var immortality = gameData.taskData["Feline Essence"]
     immortality.getEffect = function() {
         var multiplier = 1 + getBaseLog(33, immortality.level + 1) 
         return multiplier
     }
 	
-	var unholyRecall = gameData.taskData["Cosmic Recollection"];
+	var unholyRecall = gameData.taskData["Eternal Recollection"];
     unholyRecall.getEffect = function()
     {
         var multiplier = unholyRecall.level * 0.00065;
@@ -513,9 +513,9 @@ function setCustomEffects() {
 }
 
 function getHappiness() {
-    var meditationEffect = getBindedTaskEffect("Meditation")
-    var butlerEffect = getBindedItemEffect("Butler")
-	var mindseizeEffect = getBindedTaskEffect("Mind Seize")
+    var meditationEffect = getBindedTaskEffect("Pondering")
+    var butlerEffect = getBindedItemEffect("Catgirl Maid")
+	var mindseizeEffect = getBindedTaskEffect("Enlightened Mind")
 	var multiverseFragment = getBindedItemEffect("Multiverse Fragment")
     var happiness = meditationEffect() * butlerEffect() / mindseizeEffect() * multiverseFragment() * gameData.currentProperty.getEffect()
     return happiness
@@ -530,7 +530,7 @@ function getEssence() {
 }
 
 function applyMultipliers(value, multipliers) {
-    var finalMultiplier = 1
+    var finalMultiplier = 2
     multipliers.forEach(function(multiplierFunction) {
         var multiplier = multiplierFunction()
         finalMultiplier *= multiplier
@@ -545,8 +545,8 @@ function applySpeed(value) {
 }
 
 function getEvilGain() {
-    var evilControl = gameData.taskData["Evil Control"]
-    var bloodMeditation = gameData.taskData["Blood Meditation"]
+    var evilControl = gameData.taskData["Fluff Ascension"]
+    var bloodMeditation = gameData.taskData["Sacred Plushie Ritual"]
 	var absoluteWish = gameData.taskData ["Absolute Wish"]
 	var oblivionEmbodiment = gameData.taskData ["Void Embodiment"]
 	var yingYang = gameData.taskData ["Yin Yang"]
@@ -556,7 +556,7 @@ function getEvilGain() {
 
 function getEssenceGain() {
     var essenceControl = gameData.taskData["Yin Yang"]
-	var essenceCollector = gameData.taskData["Essence Collector"]
+	var essenceCollector = gameData.taskData["Spectrial Ruminator"]
     var essence = essenceControl.getEffect() * essenceCollector.getEffect()
     return essence
 	
@@ -564,9 +564,9 @@ function getEssenceGain() {
 
 
 function getGameSpeed() {
-    var timeWarping = gameData.taskData["Time Warping"]
-	var temporalDimension = gameData.taskData["Temporal Dimension"]
-	var timeLoop = gameData.taskData["Time Loop"]
+    var timeWarping = gameData.taskData["Zoomy Casting"]
+	var temporalDimension = gameData.taskData["Temporal Zoomies"]
+	var timeLoop = gameData.taskData["Zoomy Looper"]
     var timeWarpingSpeed = gameData.timeWarpingEnabled ? timeWarping.getEffect() + temporalDimension.getEffect() * timeLoop.getEffect() : 1
     var gameSpeed = baseGameSpeed * +!gameData.paused * +isAlive() * timeWarpingSpeed
     return gameSpeed
@@ -591,7 +591,7 @@ function getExpense() {
 
 function goBankrupt() {
     gameData.coins = 0
-    gameData.currentProperty = gameData.itemData["Homeless"]
+    gameData.currentProperty = gameData.itemData["Stray"]
     gameData.currentMisc = []
 }
 
@@ -883,7 +883,7 @@ function updateText() {
 	document.getElementById("essenceDisplay").textContent = gameData.essence.toFixed(1)
 	document.getElementById("essenceGainDisplay").textContent = getEssenceGain().toFixed(1)
 
-    document.getElementById("timeWarpingDisplay").textContent = "x" + (gameData.taskData["Time Warping"].getEffect() * gameData.taskData["Temporal Dimension"].getEffect() * gameData.taskData["Time Loop"].getEffect()).toFixed(1)
+    document.getElementById("timeWarpingDisplay").textContent = "x" + (gameData.taskData["Zoomy Casting"].getEffect() * gameData.taskData["Temporal Zoomies"].getEffect() * gameData.taskData["Zoomy Looper"].getEffect()).toFixed(1)
     document.getElementById("timeWarpingButton").textContent = gameData.timeWarpingEnabled ? "Disable warp" : "Enable warp"
 	}
 
@@ -1005,7 +1005,7 @@ function setSkillWithLowestMaxXp() {
             // This fix will break if the Concentration skill is either removed from the game, renamed, or the requirement is no
             // longer immediately satisfied upon starting a new game. 
             if(requirement == null) {
-                requirement = gameData.requirements["Concentration"];
+                requirement = gameData.requirements["Mindfulness"];
             }
             if (requirement.isCompleted() && !checkSkillSkipped(skill)) {
                 enabledSkills.push(skill)
@@ -1014,7 +1014,7 @@ function setSkillWithLowestMaxXp() {
     }
 
     if (enabledSkills.length == 0) {
-        skillWithLowestMaxXp = gameData.taskData["Concentration"]
+        skillWithLowestMaxXp = gameData.taskData["Mindfulness"]
         return
     }
 	
@@ -1154,7 +1154,7 @@ function rebirthThree() {
 	gameData.evil = 0
 
 	
-	var recallEffect = gameData.taskData["Cosmic Recollection"].getEffect();
+	var recallEffect = gameData.taskData["Eternal Recollection"].getEffect();
     rebirthReset()
 	
 	for (taskName in gameData.taskData) {
@@ -1168,9 +1168,9 @@ function rebirthReset() {
 
     gameData.coins = 0
     gameData.days = 365 * 14
-    gameData.currentJob = gameData.taskData["Beggar"]
-    gameData.currentSkill = gameData.taskData["Concentration"]
-    gameData.currentProperty = gameData.itemData["Homeless"]
+    gameData.currentJob = gameData.taskData["Scrounger"]
+    gameData.currentSkill = gameData.taskData["Mindfulness"]
+    gameData.currentProperty = gameData.itemData["Stray"]
     gameData.currentMisc = []
 
     for (taskName in gameData.taskData) {
@@ -1188,10 +1188,10 @@ function rebirthReset() {
 }
 
 function getLifespan() {
-    var immortality = gameData.taskData["Life Essence"]
+    var immortality = gameData.taskData["Feline Essence"]
     var superImmortality = gameData.taskData["Astral Body"]
 	var higherDimensions = gameData.taskData["Higher Dimensions"]
-	var abyss = gameData.taskData["Ceaseless Abyss"]
+	var abyss = gameData.taskData["Ceaseless Love"]
     var cosmicLongevity = gameData.taskData["Cosmic Longevity"]
     var lifespan = baseLifespan * immortality.getEffect() * superImmortality.getEffect() * abyss.getEffect() * cosmicLongevity.getEffect() * higherDimensions.getEffect()
     return lifespan
@@ -1449,21 +1449,21 @@ createData(gameData.taskData, jobBaseData)
 createData(gameData.taskData, skillBaseData)
 createData(gameData.itemData, itemBaseData) 
 
-gameData.currentJob = gameData.taskData["Beggar"]
-gameData.currentSkill = gameData.taskData["Concentration"]
-gameData.currentProperty = gameData.itemData["Homeless"]
+gameData.currentJob = gameData.taskData["Scrounger"]
+gameData.currentSkill = gameData.taskData["Mindfulness"]
+gameData.currentProperty = gameData.itemData["Stray"]
 gameData.currentMisc = []
 
 gameData.requirements = {
     //Other
-    "The Arcane Association": new TaskRequirement(getElementsByClass("The Arcane Association"), [{task: "Concentration", requirement: 200}, {task: "Meditation", requirement: 200}]),
+    "Meowgic Arcanium": new TaskRequirement(getElementsByClass("Meowgic Arcanium"), [{task: "Mindfulness", requirement: 200}, {task: "Pondering", requirement: 200}]),
 	"Galactic Council": new AgeRequirement(getElementsByClass("Galactic Council"), [{requirement: 10000}]),
 	"The Void": new AgeRequirement(getElementsByClass("The Void"), [{requirement: 1000}]),
 	"Void Manipulation": new AgeRequirement(getElementsByClass("Void Manipulation"), [{requirement: 1000}]),
 	"Celestial Powers": new AgeRequirement(getElementsByClass("Celestial Powers"), [{requirement: 10000}]),
     "Dark Magic": new EvilRequirement(getElementsByClass("Dark Magic"), [{requirement: 1}]),
 	"Almightiness": new EssenceRequirement(getElementsByClass("Almightiness"), [{requirement: 1}]),
-    "Shop": new CoinRequirement([document.getElementById("shopTabButton")], [{requirement: gameData.itemData["Tent"].getExpense() * 50}]),
+    "Shop": new CoinRequirement([document.getElementById("shopTabButton")], [{requirement: gameData.itemData["Tattered Sheets"].getExpense() * 50}]),
     "Rebirth tab": new AgeRequirement([document.getElementById("rebirthTabButton")], [{requirement: 25}]),
     "Rebirth note 1": new AgeRequirement([document.getElementById("rebirthNote1")], [{requirement: 45}]),
     "Rebirth note 2": new AgeRequirement([document.getElementById("rebirthNote2")], [{requirement: 65}]),
@@ -1471,111 +1471,111 @@ gameData.requirements = {
 	"Rebirth note 4": new AgeRequirement([document.getElementById("rebirthNote4")], [{requirement: 1000}]),
 	"Rebirth note 4": new AgeRequirement([document.getElementById("rebirthNote4")], [{requirement: 1000}]),
 	"Rebirth note 5": new AgeRequirement([document.getElementById("rebirthNote5")], [{requirement: 10000}]),
-	"Rebirth note 6": new TaskRequirement([document.getElementById("rebirthNote6")], [{task: "Cosmic Recollection", requirement: 1}]),
+	"Rebirth note 6": new TaskRequirement([document.getElementById("rebirthNote6")], [{task: "Eternal Recollection", requirement: 1}]),
     "Evil info": new EvilRequirement([document.getElementById("evilInfo")], [{requirement: 1}]),
 	"Essence info": new EssenceRequirement([document.getElementById("essenceInfo")], [{requirement: 1}]),
-    "Time warping info": new TaskRequirement([document.getElementById("timeWarping")], [{task: "Adept Mage", requirement: 10}]),
+    "Time warping info": new TaskRequirement([document.getElementById("timeWarping")], [{task: "Adept Neko Mage", requirement: 10}]),
 
     "Automation": new AgeRequirement([document.getElementById("automation")], [{requirement: 20}]),
     "Quick task display": new AgeRequirement([document.getElementById("quickTaskDisplay")], [{requirement: 20}]),
 
     //Common work
-    "Beggar": new TaskRequirement([getTaskElement("Beggar")], []),
-    "Farmer": new TaskRequirement([getTaskElement("Farmer")], [{task: "Beggar", requirement: 10}]),
-    "Fisherman": new TaskRequirement([getTaskElement("Fisherman")], [{task: "Farmer", requirement: 10}]),
-    "Miner": new TaskRequirement([getTaskElement("Miner")], [{task: "Strength", requirement: 10}, {task: "Fisherman", requirement: 10}]),
-    "Blacksmith": new TaskRequirement([getTaskElement("Blacksmith")], [{task: "Strength", requirement: 30}, {task: "Miner", requirement: 10}]),
-    "Merchant": new TaskRequirement([getTaskElement("Merchant")], [{task: "Bargaining", requirement: 50}, {task: "Blacksmith", requirement: 10}]),
+    "Scrounger": new TaskRequirement([getTaskElement("Scrounger")], []),
+    "Catnip Farmer": new TaskRequirement([getTaskElement("Catnip Farmer")], [{task: "Scrounger", requirement: 10}]),
+    "Maid": new TaskRequirement([getTaskElement("Maid")], [{task: "Catnip Farmer", requirement: 10}]),
+    "Catgirl Cafe Waitress": new TaskRequirement([getTaskElement("Catgirl Cafe Waitress")], [{task: "Courage", requirement: 10}, {task: "Maid", requirement: 10}]),
+    "Sushi Chef": new TaskRequirement([getTaskElement("Sushi Chef")], [{task: "Courage", requirement: 30}, {task: "Catgirl Cafe Waitress", requirement: 10}]),
+    "Business Catgirl": new TaskRequirement([getTaskElement("Business Catgirl")], [{task: "Meowing", requirement: 50}, {task: "Sushi Chef", requirement: 10}]),
 
     //Military 
-    "Squire": new TaskRequirement([getTaskElement("Squire")], [{task: "Strength", requirement: 5}]),
-    "Footman": new TaskRequirement([getTaskElement("Footman")], [{task: "Strength", requirement: 20}, {task: "Squire", requirement: 10}]),
-    "Veteran footman": new TaskRequirement([getTaskElement("Veteran footman")], [{task: "Battle Tactics", requirement: 40}, {task: "Footman", requirement: 10}]),
-    "Centenary": new TaskRequirement([getTaskElement("Centenary")], [{task: "Strength", requirement: 100}, {task: "Veteran footman", requirement: 10}]),
-    "Knight": new TaskRequirement([getTaskElement("Knight")], [{task: "Battle Tactics", requirement: 150}, {task: "Centenary", requirement: 10}]),
-    "Veteran Knight": new TaskRequirement([getTaskElement("Veteran Knight")], [{task: "Strength", requirement: 300}, {task: "Knight", requirement: 10}]),
-    "Holy Knight": new TaskRequirement([getTaskElement("Holy Knight")], [{task: "Mana Control", requirement: 500}, {task: "Veteran Knight", requirement: 10}]),
-    "Lieutenant General": new TaskRequirement([getTaskElement("Lieutenant General")], [{task: "Mana Control", requirement: 1000}, {task: "Battle Tactics", requirement: 1000}, {task: "Holy Knight", requirement: 10}]),
+    "Recruit": new TaskRequirement([getTaskElement("Recruit")], [{task: "Courage", requirement: 5}]),
+    "Paw Patrol": new TaskRequirement([getTaskElement("Paw Patrol")], [{task: "Courage", requirement: 20}, {task: "Recruit", requirement: 10}]),
+    "Neko Warrior": new TaskRequirement([getTaskElement("Neko Warrior")], [{task: "Battle Mewneuvers", requirement: 40}, {task: "Paw Patrol", requirement: 10}]),
+    "Catvalry": new TaskRequirement([getTaskElement("Catvalry")], [{task: "Courage", requirement: 100}, {task: "Neko Warrior", requirement: 10}]),
+    "Nya Nya Knight": new TaskRequirement([getTaskElement("Nya Nya Knight")], [{task: "Battle Mewneuvers", requirement: 150}, {task: "Catvalry", requirement: 10}]),
+    "Elite Nya Nya Knight": new TaskRequirement([getTaskElement("Elite Nya Nya Knight")], [{task: "Courage", requirement: 300}, {task: "Nya Nya Knight", requirement: 10}]),
+    "Divine Neko Warrior": new TaskRequirement([getTaskElement("Divine Neko Warrior")], [{task: "Manya Control", requirement: 500}, {task: "Elite Nya Nya Knight", requirement: 10}]),
+    "Grand Meowarshal": new TaskRequirement([getTaskElement("Grand Meowarshal")], [{task: "Manya Control", requirement: 1000}, {task: "Battle Mewneuvers", requirement: 1000}, {task: "Divine Neko Warrior", requirement: 10}]),
 	
 	
     //The Arcane Association
-    "Student": new TaskRequirement([getTaskElement("Student")], [{task: "Concentration", requirement: 200}, {task: "Meditation", requirement: 200}]),
-    "Apprentice Mage": new TaskRequirement([getTaskElement("Apprentice Mage")], [{task: "Mana Control", requirement: 400}, {task: "Student", requirement: 10}]),
-    "Adept Mage": new TaskRequirement([getTaskElement("Adept Mage")], [{task: "Mana Control", requirement: 700}, {task: "Apprentice Mage", requirement: 10}]),
-    "Master Wizard": new TaskRequirement([getTaskElement("Master Wizard")], [{task: "Mana Control", requirement: 1000}, {task: "Adept Mage", requirement: 10}]),
-    "Archmage": new TaskRequirement([getTaskElement("Archmage")], [{task: "Mana Control", requirement: 1200}, {task: "Master Wizard", requirement: 10}]),
-	"Chronomancer": new TaskRequirement([getTaskElement("Chronomancer")], [{task: "Mana Control", requirement: 1500}, {task: "Meditation", requirement: 1500}, {task: "Archmage", requirement: 25}]),
-    "Chairman": new TaskRequirement([getTaskElement("Chairman")], [{task: "Mana Control", requirement: 2000}, {task: "Productivity", requirement: 2000}, {task: "Chronomancer", requirement: 50}]),
-	"Imperator": new TaskRequirement([getTaskElement("Imperator")], [{task: "All Seeing Eye", requirement: 3000}, {task: "Concentration", requirement: 3000},  {task: "Chairman", requirement: 666}]),
+    "Pupil": new TaskRequirement([getTaskElement("Pupil")], [{task: "Mindfulness", requirement: 200}, {task: "Pondering", requirement: 200}]),
+    "Apprentice Neko Mage": new TaskRequirement([getTaskElement("Apprentice Neko Mage")], [{task: "Manya Control", requirement: 400}, {task: "Pupil", requirement: 10}]),
+    "Adept Neko Mage": new TaskRequirement([getTaskElement("Adept Neko Mage")], [{task: "Manya Control", requirement: 700}, {task: "Apprentice Neko Mage", requirement: 10}]),
+    "Master Neko Mage": new TaskRequirement([getTaskElement("Master Neko Mage")], [{task: "Manya Control", requirement: 1000}, {task: "Adept Neko Mage", requirement: 10}]),
+    "Arch Neko Mage": new TaskRequirement([getTaskElement("Arch Neko Mage")], [{task: "Manya Control", requirement: 1200}, {task: "Master Neko Mage", requirement: 10}]),
+	"Nekomancer": new TaskRequirement([getTaskElement("Nekomancer")], [{task: "Manya Control", requirement: 1500}, {task: "Pondering", requirement: 1500}, {task: "Arch Neko Mage", requirement: 25}]),
+    "College Administrator": new TaskRequirement([getTaskElement("College Administrator")], [{task: "Manya Control", requirement: 2000}, {task: "Fruitfulness", requirement: 2000}, {task: "Nekomancer", requirement: 50}]),
+	"Grandmaster": new TaskRequirement([getTaskElement("Grandmaster")], [{task: "Coin Transmutation", requirement: 3000}, {task: "Mindfulness", requirement: 3000},  {task: "College Administrator", requirement: 666}]),
 	
 	//The Void
-    "Corrupted": new AgeRequirement([getTaskElement("Corrupted")], [{task: "Squire", requirement: 1000}]),
-    "Void Slave": new TaskRequirement([getTaskElement("Void Slave")], [{task: "Corrupted", requirement: 30}]),
-    "Void Fiend": new TaskRequirement([getTaskElement("Void Fiend")], [{task: "Brainwashing", requirement: 3000}, {task: "Void Slave", requirement: 200}]),
-	"Abyss Anomaly": new TaskRequirement([getTaskElement("Abyss Anomaly")], [{task: "Mind Seize", requirement: 3000}, {task: "Void Fiend", requirement: 200}]),
-	"Void Wraith": new TaskRequirement([getTaskElement("Void Wraith")], [{task: "Temporal Dimension", requirement: 3400}, {task: "Abyss Anomaly", requirement: 300}]),
-	"Void Reaver": new TaskRequirement([getTaskElement("Void Reaver")], [{task: "Void Amplification", requirement: 3400}, {task: "Void Wraith", requirement: 250}]),
-	"Void Lord":  new TaskRequirement([getTaskElement("Void Lord")], [{task: "Void Symbiosis", requirement: 3800}, {task: "Void Reaver", requirement: 150}]),
-	"Abyss God": new TaskRequirement([getTaskElement("Abyss God")], [{task: "Void Embodiment", requirement: 4700}, {task: "Void Lord", requirement: 750}]),
+    "Angel": new AgeRequirement([getTaskElement("Angel")], [{task: "Recruit", requirement: 1000}]),
+    "Guardian Angel": new TaskRequirement([getTaskElement("Guardian Angel")], [{task: "Angel", requirement: 30}]),
+    "Archangel": new TaskRequirement([getTaskElement("Archangel")], [{task: "Brainwashing", requirement: 3000}, {task: "Guardian Angel", requirement: 200}]),
+	"Seraph": new TaskRequirement([getTaskElement("Seraph")], [{task: "Enlightened Mind", requirement: 3000}, {task: "Archangel", requirement: 200}]),
+	"Divine Wanderer": new TaskRequirement([getTaskElement("Divine Wanderer")], [{task: "Temporal Zoomies", requirement: 3400}, {task: "Seraph", requirement: 300}]),
+	"Angelic Spirit": new TaskRequirement([getTaskElement("Angelic Spirit")], [{task: "Angelic Amplification", requirement: 3400}, {task: "Divine Wanderer", requirement: 250}]),
+	"Hevanly Gatekeeper":  new TaskRequirement([getTaskElement("Hevanly Gatekeeper")], [{task: "Divine Symbiosis", requirement: 3800}, {task: "Angelic Spirit", requirement: 150}]),
+	"Guardian of the Hevans": new TaskRequirement([getTaskElement("Guardian of the Hevans")], [{task: "Void Embodiment", requirement: 4700}, {task: "Hevanly Gatekeeper", requirement: 750}]),
 
 	
 	 //Galactic Council
-    "Eternal Wanderer": new AgeRequirement([getTaskElement("Eternal Wanderer")], [{task: "Squire", requirement: 10000}]),
-    "Nova": new TaskRequirement([getTaskElement("Nova")], [{task: "Eternal Wanderer", requirement: 15}, {task: "Cosmic Longevity", requirement: 4000}]),
-	"Sigma Proioxis": new TaskRequirement([getTaskElement("Sigma Proioxis")], [{task: "Nova", requirement: 200}, {task: "Cosmic Recollection", requirement: 4500}]),
-	"Acallaris": new TaskRequirement([getTaskElement("Acallaris")], [{task: "Galactic Command", requirement: 5000}, {task: "Sigma Proioxis", requirement: 1000}]),
-	"One Above All": new TaskRequirement([getTaskElement("One Above All")], [{task: "Meditation", requirement: 6300}, {task: "Acallaris", requirement: 1400}]),
+    "Galactic Wanderer": new AgeRequirement([getTaskElement("Galactic Wanderer")], [{task: "Recruit", requirement: 10000}]),
+    "Celestial Observer": new TaskRequirement([getTaskElement("Celestial Observer")], [{task: "Galactic Wanderer", requirement: 15}, {task: "Cosmic Longevity", requirement: 4000}]),
+	"Demipotent": new TaskRequirement([getTaskElement("Demipotent")], [{task: "Celestial Observer", requirement: 200}, {task: "Eternal Recollection", requirement: 4500}]),
+	"Demigoddess": new TaskRequirement([getTaskElement("Demigoddess")], [{task: "Eternal Tinkerer", requirement: 5000}, {task: "Demipotent", requirement: 1000}]),
+	"One Above All": new TaskRequirement([getTaskElement("One Above All")], [{task: "Pondering", requirement: 6300}, {task: "Demigoddess", requirement: 1400}]),
 
 	
 
     //Fundamentals
-    "Concentration": new TaskRequirement([getTaskElement("Concentration")], []),
-    "Productivity": new TaskRequirement([getTaskElement("Productivity")], [{task: "Concentration", requirement: 5}]),
-    "Bargaining": new TaskRequirement([getTaskElement("Bargaining")], [{task: "Concentration", requirement: 20}]),
-    "Meditation": new TaskRequirement([getTaskElement("Meditation")], [{task: "Concentration", requirement: 30}, {task: "Productivity", requirement: 20}]),
+    "Mindfulness": new TaskRequirement([getTaskElement("Mindfulness")], []),
+    "Fruitfulness": new TaskRequirement([getTaskElement("Fruitfulness")], [{task: "Mindfulness", requirement: 5}]),
+    "Meowing": new TaskRequirement([getTaskElement("Meowing")], [{task: "Mindfulness", requirement: 20}]),
+    "Pondering": new TaskRequirement([getTaskElement("Pondering")], [{task: "Mindfulness", requirement: 30}, {task: "Fruitfulness", requirement: 20}]),
 
     //Combat
-    "Strength": new TaskRequirement([getTaskElement("Strength")], []),
-    "Battle Tactics": new TaskRequirement([getTaskElement("Battle Tactics")], [{task: "Concentration", requirement: 20}]),
-    "Muscle Memory": new TaskRequirement([getTaskElement("Muscle Memory")], [{task: "Concentration", requirement: 30}, {task: "Strength", requirement: 30}]),
+    "Courage": new TaskRequirement([getTaskElement("Courage")], []),
+    "Battle Mewneuvers": new TaskRequirement([getTaskElement("Battle Mewneuvers")], [{task: "Mindfulness", requirement: 20}]),
+    "Pouncing": new TaskRequirement([getTaskElement("Pouncing")], [{task: "Mindfulness", requirement: 30}, {task: "Courage", requirement: 30}]),
 
     //Magic
-    "Mana Control": new TaskRequirement([getTaskElement("Mana Control")], [{task: "Concentration", requirement: 200}, {task: "Meditation", requirement: 200}]),
-    "Life Essence": new TaskRequirement([getTaskElement("Life Essence")], [{task: "Apprentice Mage", requirement: 10}]),
-    "Time Warping": new TaskRequirement([getTaskElement("Time Warping")], [{task: "Adept Mage", requirement: 10}]),
-    "Astral Body": new TaskRequirement([getTaskElement("Astral Body")], [{task: "Archmage", requirement: 10}]),
-    "Temporal Dimension": new TaskRequirement([getTaskElement("Temporal Dimension")], [{task: "Chronomancer", requirement: 25}]),
-	"All Seeing Eye": new TaskRequirement([getTaskElement("All Seeing Eye")], [{task: "Mana Control", requirement: 2500}, {task: "Chairman", requirement: 100}]),
-	"Brainwashing": new TaskRequirement([getTaskElement("Brainwashing")], [{task: "Imperator", requirement: 100}]),
+    "Manya Control": new TaskRequirement([getTaskElement("Manya Control")], [{task: "Mindfulness", requirement: 200}, {task: "Pondering", requirement: 200}]),
+    "Feline Essence": new TaskRequirement([getTaskElement("Feline Essence")], [{task: "Apprentice Neko Mage", requirement: 10}]),
+    "Zoomy Casting": new TaskRequirement([getTaskElement("Zoomy Casting")], [{task: "Adept Neko Mage", requirement: 10}]),
+    "Astral Body": new TaskRequirement([getTaskElement("Astral Body")], [{task: "Arch Neko Mage", requirement: 10}]),
+    "Temporal Zoomies": new TaskRequirement([getTaskElement("Temporal Zoomies")], [{task: "Nekomancer", requirement: 25}]),
+	"Coin Transmutation": new TaskRequirement([getTaskElement("Coin Transmutation")], [{task: "Manya Control", requirement: 2500}, {task: "College Administrator", requirement: 100}]),
+	"Brainwashing": new TaskRequirement([getTaskElement("Brainwashing")], [{task: "Grandmaster", requirement: 100}]),
 
     //Dark magic
-    "Dark Influence": new EvilRequirement([getTaskElement("Dark Influence")], [{requirement: 1}]),
-    "Evil Control": new EvilRequirement([getTaskElement("Evil Control")], [{requirement: 1}]),
-    "Intimidation": new EvilRequirement([getTaskElement("Intimidation")], [{requirement: 1}]),
-    "Demon Training": new EvilRequirement([getTaskElement("Demon Training")], [{requirement: 20}]),
-    "Blood Meditation": new EvilRequirement([getTaskElement("Blood Meditation")], [{requirement: 50}]),
-    "Demon's Wealth": new EvilRequirement([getTaskElement("Demon's Wealth")], [{requirement: 500}]),
-	"Dark Knowledge": new EvilRequirement([getTaskElement("Dark Knowledge")], [{requirement: 5000}]),
-	"Void Influence": new EvilRequirement([getTaskElement("Void Influence")], [{requirement: 50000}]),
-	"Time Loop": new EvilRequirement([getTaskElement("Time Loop")], [{requirement: 2500000}]),
-	"Evil Incarnate": new EvilRequirement([getTaskElement("Evil Incarnate")], [{requirement: 1000000000}]),
+    "Adorable Allure": new EvilRequirement([getTaskElement("Adorable Allure")], [{requirement: 1}]),
+    "Fluff Ascension": new EvilRequirement([getTaskElement("Fluff Ascension")], [{requirement: 1}]),
+    "Weaponized Cuteness": new EvilRequirement([getTaskElement("Weaponized Cuteness")], [{requirement: 1}]),
+    "Unworldly Adorablness": new EvilRequirement([getTaskElement("Unworldly Adorablness")], [{requirement: 20}]),
+    "Sacred Plushie Ritual": new EvilRequirement([getTaskElement("Sacred Plushie Ritual")], [{requirement: 50}]),
+    "Midas Paw": new EvilRequirement([getTaskElement("Midas Paw")], [{requirement: 500}]),
+	"Sacred Knowledge": new EvilRequirement([getTaskElement("Sacred Knowledge")], [{requirement: 5000}]),
+	"Celestial Influence": new EvilRequirement([getTaskElement("Celestial Influence")], [{requirement: 50000}]),
+	"Zoomy Looper": new EvilRequirement([getTaskElement("Zoomy Looper")], [{requirement: 2500000}]),
+	"Cutie Incarnate": new EvilRequirement([getTaskElement("Cutie Incarnate")], [{requirement: 1000000000}]),
 
 
 	
 	//Void Manipulation
-	"Absolute Wish": new TaskRequirement([getTaskElement("Absolute Wish")], [{task: "Void Slave", requirement: 25}, {task: "Chairman", requirement: 300}]),
-	"Void Amplification": new TaskRequirement([getTaskElement("Void Amplification")], [{task: "Void Slave", requirement: 100}, {task: "Absolute Wish", requirement: 3000}]),
-	"Mind Seize": new TaskRequirement([getTaskElement("Mind Seize")], [{task: "Void Amplification", requirement: 3000}]),
-	"Ceaseless Abyss": new TaskRequirement([getTaskElement("Ceaseless Abyss")], [{task: "Void Influence", requirement: 4000}, {task: "Abyss Anomaly", requirement: 50}]),
-	"Void Symbiosis": new TaskRequirement([getTaskElement("Void Symbiosis")], [{task: "Ceaseless Abyss", requirement: 3500}, {task: "Void Reaver", requirement: 50}]),
-	"Void Embodiment": new TaskRequirement([getTaskElement("Void Embodiment")], [{task: "Dark Influence", requirement: 4600}, {task: "Void Lord", requirement: 50}]),
-	"Abyss Manipulation": new TaskRequirement([getTaskElement("Abyss Manipulation")], [{task: "Abyss God", requirement: 350}, {task: "Dark Influence", requirement: 6000}, {task: "Void Influence", requirement: 6000}]),
+	"Absolute Wish": new TaskRequirement([getTaskElement("Absolute Wish")], [{task: "Guardian Angel", requirement: 25}, {task: "College Administrator", requirement: 300}]),
+	"Angelic Amplification": new TaskRequirement([getTaskElement("Angelic Amplification")], [{task: "Guardian Angel", requirement: 100}, {task: "Absolute Wish", requirement: 3000}]),
+	"Enlightened Mind": new TaskRequirement([getTaskElement("Enlightened Mind")], [{task: "Angelic Amplification", requirement: 3000}]),
+	"Ceaseless Love": new TaskRequirement([getTaskElement("Ceaseless Love")], [{task: "Celestial Influence", requirement: 4000}, {task: "Seraph", requirement: 50}]),
+	"Divine Symbiosis": new TaskRequirement([getTaskElement("Divine Symbiosis")], [{task: "Ceaseless Love", requirement: 3500}, {task: "Angelic Spirit", requirement: 50}]),
+	"Void Embodiment": new TaskRequirement([getTaskElement("Void Embodiment")], [{task: "Adorable Allure", requirement: 4600}, {task: "Hevanly Gatekeeper", requirement: 50}]),
+	"Abyss Manipulation": new TaskRequirement([getTaskElement("Abyss Manipulation")], [{task: "Guardian of the Hevans", requirement: 350}, {task: "Adorable Allure", requirement: 6000}, {task: "Celestial Influence", requirement: 6000}]),
 	
 	//Celestial Powers
-	"Cosmic Longevity": new TaskRequirement([getTaskElement("Cosmic Longevity")], [{task: "Eternal Wanderer", requirement: 1}]),
-    "Cosmic Recollection": new TaskRequirement([getTaskElement("Cosmic Recollection")], [{task: "Nova", requirement: 50}, {task: "Meditation", requirement: 4200}, {task: "Mind Seize", requirement: 3000}]),
-	"Essence Collector": new TaskRequirement([getTaskElement("Essence Collector")], [{task: "Sigma Proioxis", requirement: 500}, {task: "Absolute Wish", requirement: 4900}, {task: "Dark Knowledge", requirement: 6300}]),
-	"Galactic Command": new TaskRequirement([getTaskElement("Galactic Command")], [{task: "Essence Collector", requirement: 5000}, {task: "Bargaining", requirement: 5000}]),
+	"Cosmic Longevity": new TaskRequirement([getTaskElement("Cosmic Longevity")], [{task: "Galactic Wanderer", requirement: 1}]),
+    "Eternal Recollection": new TaskRequirement([getTaskElement("Eternal Recollection")], [{task: "Celestial Observer", requirement: 50}, {task: "Pondering", requirement: 4200}, {task: "Enlightened Mind", requirement: 3000}]),
+	"Spectrial Ruminator": new TaskRequirement([getTaskElement("Spectrial Ruminator")], [{task: "Demipotent", requirement: 500}, {task: "Absolute Wish", requirement: 4900}, {task: "Sacred Knowledge", requirement: 6300}]),
+	"Eternal Tinkerer": new TaskRequirement([getTaskElement("Eternal Tinkerer")], [{task: "Spectrial Ruminator", requirement: 5000}, {task: "Meowing", requirement: 5000}]),
 
     //Essence
 	"Yin Yang": new EssenceRequirement([getTaskElement("Yin Yang")], [{requirement: 1}]),
@@ -1585,18 +1585,18 @@ gameData.requirements = {
 
 
     //Properties
-    "Homeless": new CoinRequirement([getItemElement("Homeless")], [{requirement: 0}]),
-    "Tent": new CoinRequirement([getItemElement("Tent")], [{requirement: 0}]),
-    "Wooden Hut": new CoinRequirement([getItemElement("Wooden Hut")], [{requirement: gameData.itemData["Wooden Hut"].getExpense() * 100}]),
-    "Cottage": new CoinRequirement([getItemElement("Cottage")], [{requirement: gameData.itemData["Cottage"].getExpense() * 100}]),
+    "Stray": new CoinRequirement([getItemElement("Stray")], [{requirement: 0}]),
+    "Tattered Sheets": new CoinRequirement([getItemElement("Tattered Sheets")], [{requirement: 0}]),
+    "Makeshift Cat Tree": new CoinRequirement([getItemElement("Makeshift Cat Tree")], [{requirement: gameData.itemData["Makeshift Cat Tree"].getExpense() * 100}]),
+    "Apartment": new CoinRequirement([getItemElement("Apartment")], [{requirement: gameData.itemData["Apartment"].getExpense() * 100}]),
     "House": new CoinRequirement([getItemElement("House")], [{requirement: gameData.itemData["House"].getExpense() * 100}]),
     "Large House": new CoinRequirement([getItemElement("Large House")], [{requirement: gameData.itemData["Large House"].getExpense() * 100}]),
     "Small Palace": new CoinRequirement([getItemElement("Small Palace")], [{requirement: gameData.itemData["Small Palace"].getExpense() * 100}]),
     "Grand Palace": new CoinRequirement([getItemElement("Grand Palace")], [{requirement: gameData.itemData["Grand Palace"].getExpense() * 100}]),
 	"Town Ruler": new CoinRequirement([getItemElement("Town Ruler")], [{requirement: gameData.itemData["Town Ruler"].getExpense() * 100}]),
-	"City Ruler": new CoinRequirement([getItemElement("City Ruler")], [{requirement: gameData.itemData["City Ruler"].getExpense() * 100}]),
-	"Nation Ruler": new CoinRequirement([getItemElement("Nation Ruler")], [{requirement: gameData.itemData["Nation Ruler"].getExpense() * 100}]),
-    "Pocket Dimension": new CoinRequirement([getItemElement("Pocket Dimension")], [{requirement: gameData.itemData["Pocket Dimension"].getExpense() * 100}]),
+	"Catgirl City Ruler": new CoinRequirement([getItemElement("Catgirl City Ruler")], [{requirement: gameData.itemData["Catgirl City Ruler"].getExpense() * 100}]),
+	"Nyation Ruler": new CoinRequirement([getItemElement("Nyation Ruler")], [{requirement: gameData.itemData["Nyation Ruler"].getExpense() * 100}]),
+    "Yarn Dimension": new CoinRequirement([getItemElement("Yarn Dimension")], [{requirement: gameData.itemData["Yarn Dimension"].getExpense() * 100}]),
 	"Void Realm": new CoinRequirement([getItemElement("Void Realm")], [{requirement: gameData.itemData["Void Realm"].getExpense() * 100}]),
 	"Void Universe": new CoinRequirement([getItemElement("Void Universe")], [{requirement: gameData.itemData["Void Universe"].getExpense() * 100}]),
 	"Astral Realm": new CoinRequirement([getItemElement("Astral Realm")], [{requirement: gameData.itemData["Astral Realm"].getExpense() * 100}]),
@@ -1604,17 +1604,17 @@ gameData.requirements = {
 
 
     //Misc
-    "Book": new CoinRequirement([getItemElement("Book")], [{requirement: 0}]),
-    "Dumbbells": new CoinRequirement([getItemElement("Dumbbells")], [{requirement: gameData.itemData["Dumbbells"].getExpense() * 100}]),
-    "Personal Squire": new CoinRequirement([getItemElement("Personal Squire")], [{requirement: gameData.itemData["Personal Squire"].getExpense() * 100}]),
-    "Steel Longsword": new CoinRequirement([getItemElement("Steel Longsword")], [{requirement: gameData.itemData["Steel Longsword"].getExpense() * 100}]),
-    "Butler": new CoinRequirement([getItemElement("Butler")], [{requirement: gameData.itemData["Butler"].getExpense() * 100}]),
-    "Sapphire Charm": new CoinRequirement([getItemElement("Sapphire Charm")], [{requirement: gameData.itemData["Sapphire Charm"].getExpense() * 100}]),
-    "Study Desk": new CoinRequirement([getItemElement("Study Desk")], [{requirement: gameData.itemData["Study Desk"].getExpense() * 100}]),
+    "Diary": new CoinRequirement([getItemElement("Diary")], [{requirement: 0}]),
+    "Weighted Yarnballs": new CoinRequirement([getItemElement("Weighted Yarnballs")], [{requirement: gameData.itemData["Weighted Yarnballs"].getExpense() * 100}]),
+    "Personal Assistant": new CoinRequirement([getItemElement("Personal Assistant")], [{requirement: gameData.itemData["Personal Assistant"].getExpense() * 100}]),
+    "Steel Claws": new CoinRequirement([getItemElement("Steel Claws")], [{requirement: gameData.itemData["Steel Claws"].getExpense() * 100}]),
+    "Catgirl Maid": new CoinRequirement([getItemElement("Catgirl Maid")], [{requirement: gameData.itemData["Catgirl Maid"].getExpense() * 100}]),
+    "Transmatic Gem": new CoinRequirement([getItemElement("Transmatic Gem")], [{requirement: gameData.itemData["Transmatic Gem"].getExpense() * 100}]),
+    "Fancy Chevrette": new CoinRequirement([getItemElement("Fancy Chevrette")], [{requirement: gameData.itemData["Fancy Chevrette"].getExpense() * 100}]),
     "Library": new CoinRequirement([getItemElement("Library")], [{requirement: gameData.itemData["Library"].getExpense() * 100}]), 
 	"Observatory": new CoinRequirement([getItemElement("Observatory")], [{requirement: gameData.itemData["Observatory"].getExpense() * 100}]),
 	"Mind's Eye": new CoinRequirement([getItemElement("Mind's Eye")], [{requirement: gameData.itemData["Mind's Eye"].getExpense() * 100}]),
-	"Void Necklace": new CoinRequirement([getItemElement("Void Necklace")], [{requirement: gameData.itemData["Void Necklace"].getExpense() * 100}]),
+	"Angelic Sapphire": new CoinRequirement([getItemElement("Angelic Sapphire")], [{requirement: gameData.itemData["Angelic Sapphire"].getExpense() * 100}]),
 	"Void Armor": new CoinRequirement([getItemElement("Void Armor")], [{requirement: gameData.itemData["Void Armor"].getExpense() * 100}]),
 	"Void Blade": new CoinRequirement([getItemElement("Void Blade")], [{requirement: gameData.itemData["Void Blade"].getExpense() * 100}]),
 	"Void Orb": new CoinRequirement([getItemElement("Void Orb")], [{requirement: gameData.itemData["Void Orb"].getExpense() * 100}]),

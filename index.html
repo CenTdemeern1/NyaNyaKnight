@@ -6,24 +6,24 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-    <title>Progress Knight 2.0</title>
+    <title>Nya Nya Knight~</title>
 <link rel="shortcut icon" href="img/logo.ico" />
 </head>
 <body id="body" class="dark">
     <div class="w3-margin"> 
         <div class="header">
           <img src="img/logos.png" alt="logos" />
-          <h1>Progress Knight 2.0</h1>
+          <h1>Nya Nya Knight~</h1>
         </div>
         <div class="row" style="width: 1220px;">
                 <div id="info" class="panel w3-padding" style="width: 300px; top: 0;">
                     <span id="deathText">
-                        <div style="font-size: large; color: red">Age has caught up to you</div>
-                        <div class="sidebar-element" style="color: gray">Your age has met your lifespan, use the amulet to rebirth before you pass away</div>
+                        <div style="font-size: large; color: red;">Your old age has finally caught up to you...</div>
+                        <div class="sidebar-element" style="color: gray">You have reached the end of your life and begin to feel your purr pulse starting to fade. Quickly, use the <b>Coin of Rebirth</b> before you pass away!</div>
                     </span>
                     
                     <div class="" style="font-size: large">Age <span id="ageDisplay">14</span> Day <span id="dayDisplay">0</span></div>
-                    <div class="sidebar-element" style="color: gray">Lifespan: <span id="lifespanDisplay">70</span> years</div>
+                    <div class="sidebar-element" style="color: rgb(63, 170, 212)">Lifespan: <span id="lifespanDisplay">70</span> catgirl years</div>
                     
                     <button id="pauseButton" class="w3-button button sidebar-element" onClick="setPause()">Pause</button>
     
@@ -74,24 +74,24 @@
     
                     <span id="quickTaskDisplay">
                         <div style="width: 230px" class="small-margin inline job progress-bar progressBar">
-                            <div class="progress-fill progressFill" style="background-color:rgb(225, 165, 0)"></div>
+                            <div class="progress-fill progressFill" style="background-color:rgb(232, 144, 237)"></div>
                             <div class="progress-text name">Task</div>
                         </div>
                         <div class="sidebar-element" style="color: gray">Current class</div>
     
                         <div style="width: 230px" class="small-margin skill progress-bar progressBar">
-                            <div class="progress-fill progressFill" style="background-color:rgb(225, 165, 0)"></div>
+                            <div class="progress-fill progressFill" style="background-color:rgb(232, 144, 237)"></div>
                             <div class="progress-text name">Task</div>              
                         </div>
                         <div class="sidebar-element" style="color: gray">Current ability</div>
                     </span>
     
-                    <div style="font-size: large"><span style="color: rgb(15, 105, 207)">Happiness: </span><span id="happinessDisplay"></span></div>
+                    <div style="font-size: large"><span style="color: rgb(91, 206, 250)">Happiness: </span><span id="happinessDisplay"></span></div>
                     <div style="color: gray" class="sidebar-element">Affects all XP gain</div>
     
                     <span id="evilInfo">
-                        <div style="font-size: large"><span style="color: rgb(200, 0, 0)">Evil: </span><span id="evilDisplay"></span></div>
-                        <div style="color: gray" class="sidebar-element">Affects dark magic XP gain</div>
+                        <div style="font-size: large"><span style="color: rgb(253, 201, 253)">Cutness: </span><span id="evilDisplay"></span></div>
+                        <div style="color: gray" class="sidebar-element">Affects cutie magic XP gain</div>
                     </span>
                     
                     <span id="essenceInfo">
@@ -113,9 +113,9 @@
                     -->
     
                     <span id="timeWarping">
-                        <div style="font-size: large"><span style="color: rgb(204, 34, 219)">Time Warping: </span><span id="timeWarpingDisplay"></span></div>
+                        <div style="font-size: large"><span style="color: rgb(204, 34, 219)">Zoomie Power: </span><span id="timeWarpingDisplay"></span></div>
                         <div style="color: gray">Affects game speed</div>
-                        <div style="color: red">Abilities can increase its multiplier</div>
+                        <div style="color: red">Catgirl Magic & Abilities can increase its multiplier!</div>
                         <button id="timeWarpingButton" class="w3-button button sidebar-element" style="margin-top: 5px; width:150px" onClick="setTimeWarping()">Enable warp</button>
                     </span>
                 </div>
@@ -124,7 +124,7 @@
                         <div class="w3-button w3-bar-item tabButton" id="jobTabButton" onClick="setTab(this, 'jobs')">Classes</div>
                         <div class="w3-button w3-bar-item tabButton" onClick="setTab(this, 'skills')">Abilities</div>
                         <div class="w3-button w3-bar-item tabButton" id="shopTabButton" onClick="setTab(this, 'shop')">Shop</div>
-                        <div class="w3-button w3-bar-item tabButton" id="rebirthTabButton" onClick="setTab(this, 'rebirth')">Amulet</div>
+                        <div class="w3-button w3-bar-item tabButton" id="rebirthTabButton" onClick="setTab(this, 'rebirth')">Coin</div>
                         <div class="w3-button w3-bar-item tabButton" onClick="setTab(this, 'settings')" style="float: right">Settings</div>
                     </div>
                     <div class="panel w3-margin-left w3-margin-top w3-padding" style="width: 900px; height: auto; float: right">
@@ -203,7 +203,7 @@
                         </template>
         
                         <template class="requiredRowTemplate">
-                            <td class="w3-text-gray" style="padding-left: 16px" colspan=5>
+                            <td class="w3-text-lightpink" style="padding-left: 16px" colspan=5>
                                 Required: 
                                 <span class="value" colspan=5>
                                     <span class="levels"></span>
@@ -238,53 +238,53 @@
                         <div class="tab" id="rebirth">
                             <ul>
                                 <li style="margin: 8px;">
-                                    You stumble across a strange looking amulet on your 25th birthday. It does not look like
-                                    it has any worth on the market given that it's made from cheap-looking copper. However, you
-                                    feel a weird urge to keep the amulet, so you slip it into your pocket for safekeeping.
+                                    On your 25th birthday, you are walking to work when you stumble across a strange looking coin dangling on a string from a tree. You feel an overwhelming urge to stop and begin pawing at
+                                    it. Eventually knocking the coin free, you inspect it to see that it's nothing special and made from cheap-looking copper. However, before you drop it
+                                    a strange feeling comes over you that tells you the coin is important. Instead of throwing it away, you slip it into your purrrse for safekeeping.
         
                                 </li>
                                 <li style="margin: 8px;" id="rebirthNote1">
-                                    On your 45th birthday, you feel the amulet shiver uncontrollably in your pocket. You take it
-                                    out and the constant shivering suddenly stops. More to your bizarre surprise, you notice
-                                    a strange etching on the centre of the amulet.
+                                    On your 45th birthday you are feeling a bit glum about your older age when suddenly you feel the coin shiver uncontrollably in your purrrse. You take it
+                                    out and the constant shivering suddenly stops. To your surprise, you notice
+                                    a strange etching of what appears to be a heart in the center of the coin. You stare at the etching for a while pondering if it was always there.
                                 </li>
                                 <li style="margin: 8px;" id="rebirthNote2">
                                     <div style="margin-bottom: 8px">
-                                        On your 65th birthday, you once again encounter the strange, unexplained shivering from your
-                                        amulet. But this time, a living eyeball emerges from the centre. Although terribly frightened,
-                                        you realise you do not have many years to live left anyway so you consider touching the eye
+                                        On your 65th birthday you are home reflecting on your many years that have passed when you once again encounter the strange, unexplained shivering from your
+                                        coin. But this time the heart etching emerges to life from the center. Although terribly frightened by the sudden transformation of the coin,
+                                        the calming glow of the heart settles down your fears. With so few years left in your life to live, you consider pawing the heart
                                         to see what happens.
                                     </div>
-                                    <i style="color: grey">
-                                        By touching the eyeball, you will be reborn and have to restart life again, losing all your levels and coins.
-                                        However, you will gain <b>xp multipliers</b> for your classes and abilities equivalent to: <b>1 + the max level of the class or ability / 10.</b>
-                                        This means you will learn everything again much more quickly than you did in your previous life. <span style="color: rgb(200, 0, 0)">
-                                        Something tells you that the amulet might evolve after living for <b>2 whole centuries</b> and transform even further after living for
+                                    <i style="color: rgb(91, 206, 250)">
+                                        By pawing the heart, you will be reborn at age 14 and have to restart your entire life all over again, losing all your levels and coins.
+                                        However, you will gain <b>a special xp multiplier</b> for your catgirl classes and abilities equivalent to: <b>2 plus the max level of the class or ability, divided by 10 (2+MaxLvl/10).</b>
+                                        This means you will learn everything again much more quickly than you did in your previous life. <span style="color: rgb(232, 144, 237)">
+                                        Something tells you that the coin might reveal more after living for <b>2 whole centuries</b> and transform even further after living for
                                         a <b>millennium</b> and reach its final form after <b>ten millenia</b>...
                                         </span>
                                     </i>
                                     </br>
-                                    <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthOne()">Touch the eye</button>
+                                    <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthOne()">Paw the Heart~ <3</button>
                                     </br>
                                 </li>
                                 <li style="margin: 8px;" id="rebirthNote3">
                                     <div style="margin-bottom: 8px;">
-                                        Your gut instinct was right. The moment you hit the grand age of 200, you hear an ominous hum coming from the amulet.
-                                        A mouth emerges from its surface and begins to cackle, and proceeds to say: "So you've made it this far... Are you ready to embrace evil?"
+                                        Your catgirl instincts were right. The moment you hit the grand age of 200, far surpassing your normal livespan, you hear an wonderous hum coming from the coin.
+                                        An angelic voice begins to softly speak and proceeds to say: <span style="color: rgb(244, 240, 245)">"So you've made it this far, I think you might be her... Are you ready to become cute?"</span>
                                     </div>
-                                    <i style="color: rgb(200, 0, 0)">
-                                        If you decide to embrace evil, all of your levels, coins and even max levels will be reset.
-                                        You will be reborn as a fresh slate. However, you will unlock a new line of skills and gain
-                                        <b><span id="evilGainDisplay"></span> evil</b>, and which will heavily impact your future lives.
+                                    <i style="color: rgb(232, 144, 237)">
+                                        If you decide to become cute, <b>ALL of your levels, coins and even max levels will be completely reset.</b>
+                                        Meaning you will start your next life completely anew with no rebirth multipliers. In exchange for becoming cute, you will unlock a new line of Cutie skills and gain
+                                        <b><span id="evilGainDisplay"></span> cuteness</b>, which will drastically impact your future catgirl lives and abilities.
                                     </i>
                                     </br>
-                                        <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthTwo()">Embrace evil</button>
+                                        <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthTwo()">Embrace Cutneness~ :3</button>
                                     </br>
                                 </li>
                                 <li style="margin: 8px;" id="rebirthNote4">
                                     <div style="margin-bottom: 8px;">
-                                        A thousand years have come and gone and yet, you still remain alive... somehow. You feel your amulet shivering again and to your surprise, you see small tendrils
-                                        full of eyeballs emergin from it. As you are about to drop the amulet, you hear frightening screech followed by whispers in your head... <b>"You have to embrace the Void..."</b> 
+                                        A thousand years have come and gone and yet, you still remain alive... somehow. You feel your coin shivering again and to your surprise, you see small tendrils
+                                        full of eyeballs emergin from it. As you are about to drop the coin, you hear calming hum followed by whispers in your head... <b>"You have to embrace the Void..."</b> 
                                     </div>
                                     <i style="color: rgb(204, 0, 255)">
                                         You have unlocked <b>"The Void"</b> class category along with <b>"Void Manipulation"</b> abilities.
@@ -293,8 +293,8 @@
                                 </br>
                                 <li style="margin: 8px;" id="rebirthNote5">
                                     <div style="margin-bottom: 8px;">
-                                        Ten millenia have passed... most of them spent serving the Void, yet there is still a glimpse of humanity inside of you. All of the sudden your amulet starts to glow in the distance,
-                                        illuminating darkness around you with the brightness of thousand suns. With the very last remnant of your free will you run to your amulet and touch it... <b>"You are now part of something
+                                        Ten millenia have passed... most of them spent serving the Void, yet there is still a glimpse of humanity inside of you. All of the sudden your coin starts to glow in the distance,
+                                        illuminating darkness around you with the brightness of thousand suns. With the very last remnant of your free will you run to your coin and touch it... <b>"You are now part of something
                                         bigger than yourself..."</b>
                                     </div>
                                     <i style="color: rgb(255, 204, 102)">
@@ -329,6 +329,9 @@
                         <div class="tab" id="settings">
                             <ul>
                                 <li>
+                                    <h4>This game was lovingly soft forked by Rain雨, the Radical Dame~ from Progress Knight 2.0</h4>
+                                </li>
+                                <li>
                                     <h2>Import/export save</h2>
                                     <button class="w3-button button" onClick="importGameData()">Import</button>
                                     <button class="w3-button button" onClick="exportGameData()">Export</button>
@@ -336,13 +339,19 @@
                                         <input id="importExportBox" type="text" style="width:300px; height:30px"></input>
                                     </form>
                                 </li>
-                                <li>
+                                <li>  
                                     <h2>Toggle light/dark mode</h2>
                                     <button class="w3-button button" onClick="setLightDarkMode()">Toggle</button>
                                 </li>
                                 <li>
-                                    <h2>Join the discord community!</h2>
+                                    <h2>Join the Progress Knight discord community!</h2>
                                     <a href="https://discord.gg/fTRS4pHGka" target="_blank">
+                                        <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_icon_130958.png" width="100" height="100"></img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <h2>Join the Rain's Refuge discord community!</h2>
+                                    <a href="https://discord.gg/5JNdxkwxnn" target="_blank">
                                         <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_icon_130958.png" width="100" height="100"></img>
                                     </a>
                                 </li>
