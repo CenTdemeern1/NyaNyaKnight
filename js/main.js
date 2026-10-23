@@ -208,7 +208,7 @@ const skillCategories = {
     "Catgirl Fundmentals"           : ["Mindfulness", "Fruitfulness", "Meowing", "Pondering"],
     "Combat"                 : ["Courage", "Battle Mewneuvers", "Pouncing"],
     "Catgirl Magic"                  : ["Manya Control", "Feline Essence", "Zoomy Casting", "Astral Body", "Temporal Zoomies", "Coin Transmutation", "Brainwashing"],
-    "Dark Magic"             : ["Adorable Allure", "Fluff Ascension", "Weaponized Cuteness", "Unworldly Adorablness", "Sacred Plushie Ritual", "Midas Paw", "Sacred Knowledge", "Celestial Influence", "Zoomy Looper", "Cutie Incarnate"],
+    "Cutie Magic"             : ["Adorable Allure", "Fluff Ascension", "Weaponized Cuteness", "Unworldly Adorablness", "Sacred Plushie Ritual", "Midas Paw", "Sacred Knowledge", "Celestial Influence", "Zoomy Looper", "Cutie Incarnate"],
 	"Void Manipulation"      : ["Absolute Wish", "Angelic Amplification", "Enlightened Mind", "Ceaseless Love", "Divine Symbiosis", "Void Embodiment", "Abyss Manipulation"],
 	"Celestial Powers"       : ["Cosmic Longevity", "Eternal Recollection", "Spectrial Ruminator", "Eternal Tinkerer"],
 	"Almightiness"           : ["Yin Yang", "Parallel Universe", "Higher Dimensions", "Epiphany"]
@@ -219,25 +219,25 @@ const itemCategories = {
     "Properties"             : ["Stray", "Tattered Sheets", "Makeshift Cat Tree", "Apartment", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "Catgirl City Ruler", "Nyation Ruler", "Yarn Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
     "Misc"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
 }
-// Here is where you update the header row colors. Its does wierd things when you use hex colors. I will probably update this
-// to all RGB later which is easier for me to program. Maybe... we'll see~ lol
-// On a serious note, if you don't write the hex in properly you will break the header color and it will display nothing~ :3
+// Here is where you update the header row colors. Its does wierd things when you use hex colors. I have updated all of these
+// to be RGB for easier editing. I also tested all the headers out as well. You could switch it back to HEX# but the code is
+// a little weird about it? It could be a skill issue on my part, lets not rule that out. In any case, its RGB now~ :3
 
 const headerRowColors = {
-    "Catgirl Work": "#407d24",
-    "The Mewarine Corps": "#a82a34",
-    "The Nekomage Guild": "#C71585",
-	"The Void": "#762B91",
-    "Galactic Council": "#D5C010",
-    "Catgirl Fundmentals": "#55a630",
-    "Combat": "#e63946",
-    "Catgirl Magic": "#C71585",
-    "Dark Magic": "#73000f",
-	"Almightiness": "#18d2d9",
-	"Void Manipulation": "#762B91",
-	"Celestial Powers": "#D5C010",
-    "Properties": "#219ebc",
-    "Misc": "#b56576",
+    "Catgirl Work": "rgb(228, 162, 236)",
+    "The Mewarine Corps": "rgb(204, 16, 31)",
+    "Meowgic Arcanium": "rgb(28, 191, 255)",
+	"The Void": "rgb(118, 43, 145)",
+    "Galactic Council": "rgb(213, 192, 16)",
+    "Catgirl Fundmentals": "rgb(228, 162, 236)",
+    "Combat": "rgb(204, 16, 31)",
+    "Catgirl Magic": "rgb(28, 191, 255)",
+    "Cutie Magic": "rgb(115, 0, 15)",
+	"Almightiness": "rgb(24, 210, 217)",
+	"Void Manipulation": "rgb(118, 43, 145)",
+	"Celestial Powers": "rgb(213, 192, 16)",
+    "Properties": "rgb(33, 158, 188)",
+    "Misc": "rgb(181, 101, 118)",
 }
 // When you over your mouse over the different classes and items in the game this little word bubble will pop up.
 // This is where you modify those messages on screen. Have with it. I certainly did~ :3
@@ -360,7 +360,7 @@ const tooltips = {
 	"Astral Realm": "Beneath personality and ego lays the source of our deep character, our personhood. Here are the psychic senses, our deep mind and emotions, symbols and inner reality.",
 	"Galactic Throne": "You sit on your throne, overseeing the existence itself.", 
 
-    //Misc
+    //Misc (Rename this to Items)
     "Diary": "A place to write down all your thoughts and dreams, allowing you to learn a lot more quickly.",
     "Weighted Yarnballs": "Heavy yarnballs used in strenuous exercise to toughen up and accumulate courage even faster than before. ",
     "Personal Assistant": "Assists you in completing day to day activities, giving you more time to be productive at work... or pretend too~ :3",
@@ -386,9 +386,9 @@ const tooltips = {
 // I only messed with changing basic variables here so far.
 
 const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "Nv", "Vg", "Uv", "Dv", "Tv", "Qt", "Qv", "Sv", "Oc", "Nd", "Tg", "OMG"];
-
+// This specify's which page the information gets put on.
 const jobTabButton = document.getElementById("jobTabButton")
-
+// Fun, I love math...
 function getBaseLog(x, y) {
     return Math.log(y) / Math.log(x);
 }
@@ -461,7 +461,7 @@ function addMultipliers() {
 		} else if (jobCategories["Galactic Council"].includes(task.name)) {
 			task.xpMultipliers.push(getBindedItemEffect("Celestial Robe"))
 			task.xpMultipliers.push(getBindedTaskEffect("Epiphany"))
-        } else if (skillCategories["Dark Magic"].includes(task.name)) {
+        } else if (skillCategories["Cutie Magic"].includes(task.name)) {
             task.xpMultipliers.push(getEvil)
         } else if (skillCategories["Almightiness"].includes(task.name)) {
 			task.xpMultipliers.push(getEssence)
@@ -480,6 +480,9 @@ function addMultipliers() {
 		item.expenseMultipliers.push(getBindedTaskEffect("Eternal Tinkerer"))
     }
 }
+
+// This appears to be the area where you can modify all the math for the skills.
+// I am going to tinker around with this a lot to see if I can add custom variables.
 
 function setCustomEffects() {
     var bargaining = gameData.taskData["Meowing"]
@@ -537,6 +540,10 @@ function setCustomEffects() {
         return multiplier;
     }
 }
+
+// This function looks for what skills/items multiply the happiness mechanic and updates the game.
+// I think you can modify this variable and add additional ones to change the mechanics a bit.
+// I plan to mess with this soon~
 
 function getHappiness() {
     var meditationEffect = getBindedTaskEffect("Pondering")
@@ -1493,7 +1500,7 @@ gameData.requirements = {
 	"The Void": new AgeRequirement(getElementsByClass("The Void"), [{requirement: 1000}]),
 	"Void Manipulation": new AgeRequirement(getElementsByClass("Void Manipulation"), [{requirement: 1000}]),
 	"Celestial Powers": new AgeRequirement(getElementsByClass("Celestial Powers"), [{requirement: 10000}]),
-    "Dark Magic": new EvilRequirement(getElementsByClass("Dark Magic"), [{requirement: 1}]),
+    "Cutie Magic": new EvilRequirement(getElementsByClass("Cutie Magic"), [{requirement: 1}]),
 	"Almightiness": new EssenceRequirement(getElementsByClass("Almightiness"), [{requirement: 1}]),
     "Shop": new CoinRequirement([document.getElementById("shopTabButton")], [{requirement: gameData.itemData["Tattered Sheets"].getExpense() * 50}]),
     "Rebirth tab": new AgeRequirement([document.getElementById("rebirthTabButton")], [{requirement: 25}]),
@@ -1513,21 +1520,21 @@ gameData.requirements = {
 
     //Common work
     "Scrounger": new TaskRequirement([getTaskElement("Scrounger")], []),
-    "Catnip Farmer": new TaskRequirement([getTaskElement("Catnip Farmer")], [{task: "Scrounger", requirement: 10}]),
-    "Maid": new TaskRequirement([getTaskElement("Maid")], [{task: "Catnip Farmer", requirement: 10}]),
-    "Catgirl Cafe Waitress": new TaskRequirement([getTaskElement("Catgirl Cafe Waitress")], [{task: "Courage", requirement: 10}, {task: "Maid", requirement: 10}]),
-    "Sushi Chef": new TaskRequirement([getTaskElement("Sushi Chef")], [{task: "Courage", requirement: 30}, {task: "Catgirl Cafe Waitress", requirement: 10}]),
-    "Business Catgirl": new TaskRequirement([getTaskElement("Business Catgirl")], [{task: "Meowing", requirement: 50}, {task: "Sushi Chef", requirement: 10}]),
+    "Catnip Farmer": new TaskRequirement([getTaskElement("Catnip Farmer")], [{task: "Mindfulness", requirement: 10}, {task: "Scrounger", requirement: 10}]),
+    "Maid": new TaskRequirement([getTaskElement("Maid")], [{task: "Fruitfulness", requirement: 20}, {task: "Catnip Farmer", requirement: 20}]),
+    "Catgirl Cafe Waitress": new TaskRequirement([getTaskElement("Catgirl Cafe Waitress")], [{task: "Meowing", requirement: 30}, {task: "Courage", requirement: 30}, {task: "Maid", requirement: 30}]),
+    "Sushi Chef": new TaskRequirement([getTaskElement("Sushi Chef")], [{task: "Mindfulness", requirement: 40}, {task: "Fruitfulness", requirement: 40}, {task: "Courage", requirement: 40}, {task: "Catgirl Cafe Waitress", requirement: 40}]),
+    "Business Catgirl": new TaskRequirement([getTaskElement("Business Catgirl")], {task: "Mindfulness", requirement: 50}, {task: "Fruitfulness", requirement: 50}, {task: "Meowing", requirement: 50}, [{task: "Pondering", requirement: 50}, {task: "Sushi Chef", requirement: 50}]),
 
     //Military 
-    "Recruit": new TaskRequirement([getTaskElement("Recruit")], [{task: "Courage", requirement: 5}]),
+    "Recruit": new TaskRequirement([getTaskElement("Recruit")], [{task: "Courage", requirement: 5}, {task: "Fruitfulness", requirement: 5}]),
     "Paw Patrol": new TaskRequirement([getTaskElement("Paw Patrol")], [{task: "Courage", requirement: 20}, {task: "Recruit", requirement: 10}]),
-    "Neko Warrior": new TaskRequirement([getTaskElement("Neko Warrior")], [{task: "Battle Mewneuvers", requirement: 40}, {task: "Paw Patrol", requirement: 10}]),
-    "Catvalry": new TaskRequirement([getTaskElement("Catvalry")], [{task: "Courage", requirement: 100}, {task: "Neko Warrior", requirement: 10}]),
-    "Nya Nya Knight": new TaskRequirement([getTaskElement("Nya Nya Knight")], [{task: "Battle Mewneuvers", requirement: 150}, {task: "Catvalry", requirement: 10}]),
-    "Elite Nya Nya Knight": new TaskRequirement([getTaskElement("Elite Nya Nya Knight")], [{task: "Courage", requirement: 300}, {task: "Nya Nya Knight", requirement: 10}]),
-    "Divine Neko Warrior": new TaskRequirement([getTaskElement("Divine Neko Warrior")], [{task: "Manya Control", requirement: 500}, {task: "Elite Nya Nya Knight", requirement: 10}]),
-    "Grand Meowarshal": new TaskRequirement([getTaskElement("Grand Meowarshal")], [{task: "Manya Control", requirement: 1000}, {task: "Battle Mewneuvers", requirement: 1000}, {task: "Divine Neko Warrior", requirement: 10}]),
+    "Neko Warrior": new TaskRequirement([getTaskElement("Neko Warrior")], [{task: "Battle Mewneuvers", requirement: 50}, {task: "Meowing", requirement: 50}, {task: "Paw Patrol", requirement: 20}]),
+    "Catvalry": new TaskRequirement([getTaskElement("Catvalry")], [{task: "Courage", requirement: 100}, {task: "Meowing", requirement: 100}, {task: "Neko Warrior", requirement: 30}]),
+    "Nya Nya Knight": new TaskRequirement([getTaskElement("Nya Nya Knight")], [{task: "Battle Mewneuvers", requirement: 150}, {task: "Pouncing", requirement: 150}, {task: "Catvalry", requirement: 40}]),
+    "Elite Nya Nya Knight": new TaskRequirement([getTaskElement("Elite Nya Nya Knight")], [{task: "Courage", requirement: 300}, {task: "Battle Mewneuvers", requirement: 300}, {task: "Pouncing", requirement: 300}, {task: "Nya Nya Knight", requirement: 50}]),
+    "Divine Neko Warrior": new TaskRequirement([getTaskElement("Divine Neko Warrior")], [{task: "Manya Control", requirement: 500}, {task: "Courage", requirement: 500}, {task: "Battle Mewneuvers", requirement: 500}, {task: "Elite Nya Nya Knight", requirement: 60}]),
+    "Grand Meowarshal": new TaskRequirement([getTaskElement("Grand Meowarshal")], [{task: "Manya Control", requirement: 1000}, {task: "Courage", requirement: 1000}, {task: "Battle Mewneuvers", requirement: 1000},  {task: "Pouncing", requirement: 1000}, {task: "Divine Neko Warrior", requirement: 70}]),
 	
 	
     //The Arcane Association
