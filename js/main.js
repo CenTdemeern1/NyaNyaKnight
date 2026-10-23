@@ -360,7 +360,7 @@ const tooltips = {
 	"Astral Realm": "Beneath personality and ego lays the source of our deep character, our personhood. Here are the psychic senses, our deep mind and emotions, symbols and inner reality.",
 	"Galactic Throne": "You sit on your throne, overseeing the existence itself.", 
 
-    //Misc (Rename this to Items)
+    //Misc
     "Diary": "A place to write down all your thoughts and dreams, allowing you to learn a lot more quickly.",
     "Weighted Yarnballs": "Heavy yarnballs used in strenuous exercise to toughen up and accumulate courage even faster than before. ",
     "Personal Assistant": "Assists you in completing day to day activities, giving you more time to be productive at work... or pretend too~ :3",
@@ -386,9 +386,9 @@ const tooltips = {
 // I only messed with changing basic variables here so far.
 
 const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "Nv", "Vg", "Uv", "Dv", "Tv", "Qt", "Qv", "Sv", "Oc", "Nd", "Tg", "OMG"];
-// This specify's which page the information gets put on.
+
 const jobTabButton = document.getElementById("jobTabButton")
-// Fun, I love math...
+
 function getBaseLog(x, y) {
     return Math.log(y) / Math.log(x);
 }
@@ -481,9 +481,6 @@ function addMultipliers() {
     }
 }
 
-// This appears to be the area where you can modify all the math for the skills.
-// I am going to tinker around with this a lot to see if I can add custom variables.
-
 function setCustomEffects() {
     var bargaining = gameData.taskData["Meowing"]
     bargaining.getEffect = function() {
@@ -540,9 +537,6 @@ function setCustomEffects() {
         return multiplier;
     }
 }
-// This function looks for what skills/items multiply the happiness mechanic and updates the game.
-// I think you can modify this variable and add additional ones to change the mechanics a bit.
-// I plan to mess with this soon~
 
 function getHappiness() {
     var meditationEffect = getBindedTaskEffect("Pondering")
