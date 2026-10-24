@@ -9,7 +9,7 @@ var gameData = {
     itemData: {},
 
     coins: 0,
-    days: 365 * 14,
+    days: 365 * 18,
     evil: 0,
 	essence: 0,
     paused: false,
@@ -25,7 +25,7 @@ var gameData = {
     currentMisc: null,
 
     settings: {
-        stickySidebar: false
+        stickySidebar: true
     }
 }
 
@@ -38,7 +38,7 @@ const autoLearnElement = document.getElementById("autoLearn")
 
 const updateSpeed = 20
 
-const baseLifespan = 365 * 70
+const baseLifespan = 365 * 100
 
 const baseGameSpeed = 4
 
@@ -217,27 +217,27 @@ const skillCategories = {
 
 const itemCategories = {
     "Properties"             : ["Stray", "Tattered Sheets", "Makeshift Cat Tree", "Apartment", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "Catgirl City Ruler", "Nyation Ruler", "Yarn Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
-    "Misc"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
+    "Items"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
 }
 // Here is where you update the header row colors. Its does wierd things when you use hex colors. I will probably update this
 // to all RGB later which is easier for me to program. Maybe... we'll see~ lol
 // On a serious note, if you don't write the hex in properly you will break the header color and it will display nothing~ :3
 
 const headerRowColors = {
-    "Catgirl Work": "#407d24",
-    "The Mewarine Corps": "#a82a34",
-    "The Nekomage Guild": "#C71585",
-	"The Void": "#762B91",
-    "Galactic Council": "#D5C010",
-    "Catgirl Fundmentals": "#55a630",
-    "Combat": "#e63946",
-    "Catgirl Magic": "#C71585",
-    "Dark Magic": "#73000f",
-	"Almightiness": "#18d2d9",
-	"Void Manipulation": "#762B91",
-	"Celestial Powers": "#D5C010",
-    "Properties": "#219ebc",
-    "Misc": "#b56576",
+    "Catgirl Work": "rgb(228, 162, 236)",
+    "The Mewarine Corps": "rgb(204, 16, 31)",
+    "Meowgic Arcanium": "rgb(28, 191, 255)",
+	"The Void": "rgb(118, 43, 145)",
+    "Galactic Council": "rgb(213, 192, 16)",
+    "Catgirl Fundmentals": "rgb(228, 162, 236)",
+    "Combat": "rgb(204, 16, 31)",
+    "Catgirl Magic": "rgb(28, 191, 255)",
+    "Cutie Magic": "rgb(179, 124, 209)",
+	"Almightiness": "rgb(24, 210, 217)",
+	"Void Manipulation": "rgb(118, 43, 145)",
+	"Celestial Powers": "rgb(213, 192, 16)",
+    "Properties": "rgb(33, 158, 188)",
+    "Items": "rgb(127, 134, 0)",
 }
 // When you over your mouse over the different classes and items in the game this little word bubble will pop up.
 // This is where you modify those messages on screen. Have with it. I certainly did~ :3
@@ -870,7 +870,7 @@ function updateItemRows() {
         var button = row.getElementsByClassName("button")[0]
         button.disabled = gameData.coins < item.getExpense()
         var active = row.getElementsByClassName("active")[0]
-        var color = itemCategories["Properties"].includes(item.name) ? headerRowColors["Properties"] : headerRowColors["Misc"]
+        var color = itemCategories["Properties"].includes(item.name) ? headerRowColors["Properties"] : headerRowColors["Items"]
         active.style.backgroundColor = gameData.currentMisc.includes(item) || item == gameData.currentProperty ? color : "white"
         row.getElementsByClassName("effect")[0].textContent = item.getEffectDescription()
         formatCoins(item.getExpense(), row.getElementsByClassName("expense")[0])
@@ -1443,7 +1443,7 @@ window.addEventListener('keydown', function(e) {
     if(e.key=="l" || e.key=="L") document.getElementById("autoLearn").checked = !document.getElementById("autoLearn").checked
     if(e.key=="p" || e.key=="P") document.getElementById("autoPromote").checked = !document.getElementById("autoPromote").checked
 });
-
+// This is the auto-pause function. I want to tinker with this more in the future.
 (function() {
     let span = document.createElement('span');
     let div = document.createElement('div');
@@ -1470,7 +1470,7 @@ window.addEventListener('keydown', function(e) {
 
 
 //Init
-// Init what? What does that even mean? Anyways. What I think it does is check that you met the requirements to
+// What I think it does is check that you met the requirements to
 // upgrade to another class or make progress. I'm still figuring it out myself...
 
 createAllRows(jobCategories, "jobTable")
@@ -1508,26 +1508,26 @@ gameData.requirements = {
 	"Essence info": new EssenceRequirement([document.getElementById("essenceInfo")], [{requirement: 1}]),
     "Time warping info": new TaskRequirement([document.getElementById("timeWarping")], [{task: "Adept Neko Mage", requirement: 10}]),
 
-    "Automation": new AgeRequirement([document.getElementById("automation")], [{requirement: 20}]),
-    "Quick task display": new AgeRequirement([document.getElementById("quickTaskDisplay")], [{requirement: 20}]),
+    "Automation": new AgeRequirement([document.getElementById("automation")], [{requirement: 1}]),
+    "Quick task display": new AgeRequirement([document.getElementById("quickTaskDisplay")], [{requirement: 1}]),
 
     //Common work
     "Scrounger": new TaskRequirement([getTaskElement("Scrounger")], []),
-    "Catnip Farmer": new TaskRequirement([getTaskElement("Catnip Farmer")], [{task: "Scrounger", requirement: 10}]),
-    "Maid": new TaskRequirement([getTaskElement("Maid")], [{task: "Catnip Farmer", requirement: 10}]),
-    "Catgirl Cafe Waitress": new TaskRequirement([getTaskElement("Catgirl Cafe Waitress")], [{task: "Courage", requirement: 10}, {task: "Maid", requirement: 10}]),
-    "Sushi Chef": new TaskRequirement([getTaskElement("Sushi Chef")], [{task: "Courage", requirement: 30}, {task: "Catgirl Cafe Waitress", requirement: 10}]),
-    "Business Catgirl": new TaskRequirement([getTaskElement("Business Catgirl")], [{task: "Meowing", requirement: 50}, {task: "Sushi Chef", requirement: 10}]),
+    "Catnip Farmer": new TaskRequirement([getTaskElement("Catnip Farmer")], [{task: "Mindfulness", requirement: 5}, {task: "Fruitfulness", requirement: 5}, {task: "Scrounger", requirement: 5}]),
+    "Maid": new TaskRequirement([getTaskElement("Maid")], [{task: "Mindfulness", requirement: 15}, {task: "Fruitfulness", requirement: 15}, {task: "Catnip Farmer", requirement: 10}]),
+    "Catgirl Cafe Waitress": new TaskRequirement([getTaskElement("Catgirl Cafe Waitress")], [{task: "Mindfulness", requirement: 20}, {task: "Fruitfulness", requirement: 20}, {task: "Meowing", requirement: 10}, {task: "Maid", requirement: 15}]),
+    "Sushi Chef": new TaskRequirement([getTaskElement("Sushi Chef")], [{task: "Mindfulness", requirement: 30}, {task: "Fruitfulness", requirement: 30}, {task: "Pondering", requirement: 10}, {task: "Catgirl Cafe Waitress", requirement: 20}]),
+    "Business Catgirl": new TaskRequirement([getTaskElement("Business Catgirl")], [{task: "Mindfulness", requirement: 50}, {task: "Fruitfulness", requirement: 50}, {task: "Meowing", requirement: 50}, {task: "Pondering", requirement: 50}, {task: "Sushi Chef", requirement: 25}]),
 
     //Military 
     "Recruit": new TaskRequirement([getTaskElement("Recruit")], [{task: "Courage", requirement: 5}]),
-    "Paw Patrol": new TaskRequirement([getTaskElement("Paw Patrol")], [{task: "Courage", requirement: 20}, {task: "Recruit", requirement: 10}]),
-    "Neko Warrior": new TaskRequirement([getTaskElement("Neko Warrior")], [{task: "Battle Mewneuvers", requirement: 40}, {task: "Paw Patrol", requirement: 10}]),
-    "Catvalry": new TaskRequirement([getTaskElement("Catvalry")], [{task: "Courage", requirement: 100}, {task: "Neko Warrior", requirement: 10}]),
-    "Nya Nya Knight": new TaskRequirement([getTaskElement("Nya Nya Knight")], [{task: "Battle Mewneuvers", requirement: 150}, {task: "Catvalry", requirement: 10}]),
-    "Elite Nya Nya Knight": new TaskRequirement([getTaskElement("Elite Nya Nya Knight")], [{task: "Courage", requirement: 300}, {task: "Nya Nya Knight", requirement: 10}]),
-    "Divine Neko Warrior": new TaskRequirement([getTaskElement("Divine Neko Warrior")], [{task: "Manya Control", requirement: 500}, {task: "Elite Nya Nya Knight", requirement: 10}]),
-    "Grand Meowarshal": new TaskRequirement([getTaskElement("Grand Meowarshal")], [{task: "Manya Control", requirement: 1000}, {task: "Battle Mewneuvers", requirement: 1000}, {task: "Divine Neko Warrior", requirement: 10}]),
+    "Paw Patrol": new TaskRequirement([getTaskElement("Paw Patrol")], [{task: "Courage", requirement: 20}, {task: "Recruit", requirement: 20}]),
+    "Neko Warrior": new TaskRequirement([getTaskElement("Neko Warrior")], [{task: "Courage", requirement: 40}, {task: "Battle Mewneuvers", requirement: 40}, {task: "Paw Patrol", requirement: 25}]),
+    "Catvalry": new TaskRequirement([getTaskElement("Catvalry")], [{task: "Courage", requirement: 100}, {task: "Battle Mewneuvers", requirement: 100}, {task: "Neko Warrior", requirement: 30}]),
+    "Nya Nya Knight": new TaskRequirement([getTaskElement("Nya Nya Knight")], [{task: "Courage", requirement: 150}, {task: "Battle Mewneuvers", requirement: 150}, {task: "Pouncing", requirement: 100}, {task: "Catvalry", requirement: 35}]),
+    "Elite Nya Nya Knight": new TaskRequirement([getTaskElement("Elite Nya Nya Knight")], [{task: "Courage", requirement: 300}, {task: "Battle Mewneuvers", requirement: 300}, {task: "Pouncing", requirement: 150}, {task: "Nya Nya Knight", requirement: 40}]),
+    "Divine Neko Warrior": new TaskRequirement([getTaskElement("Divine Neko Warrior")], [{task: "Manya Control", requirement: 500}, {task: "Elite Nya Nya Knight", requirement: 45}]),
+    "Grand Meowarshal": new TaskRequirement([getTaskElement("Grand Meowarshal")], [{task: "Manya Control", requirement: 1000}, {task: "Battle Mewneuvers", requirement: 1000}, {task: "Divine Neko Warrior", requirement: 50}]),
 	
 	
     //The Arcane Association
