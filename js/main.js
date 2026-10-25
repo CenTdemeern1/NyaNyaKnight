@@ -38,7 +38,7 @@ const autoLearnElement = document.getElementById("autoLearn")
 
 const updateSpeed = 20
 
-const baseLifespan = 365 * 100
+const baseLifespan = 365 * 84
 
 const baseGameSpeed = 4
 
@@ -90,7 +90,7 @@ const jobBaseData = {
     "Celestial Observer": {name: "Celestial Observer", maxXp: 51000000000000000000, income: 3000000000000},
     "Demipotent": {name: "Demipotent", maxXp: 500000000000000000000, income: 25000000000000},
 	"Demigoddess": {name: "Demigoddess", maxXp: 50000000000000000000000, income: 215000000000000},
-	"One Above All": {name: "One Above All", maxXp: 5000000000000000000000000000, income: 25000000000000000},
+	"Catgirl Goddess": {name: "Catgirl Goddess", maxXp: 5000000000000000000000000000, income: 25000000000000000},
 	
 	
 	
@@ -99,14 +99,14 @@ const jobBaseData = {
 // update them everywhere else or it will also break the game.
 
 const skillBaseData = {
-    "Mindfulness": {name: "Mindfulness", maxXp: 100, effect: 0.01, description: "Ability XP"},
-    "Fruitfulness": {name: "Fruitfulness", maxXp: 100, effect: 0.01, description: "Class XP"},
-    "Meowing": {name: "Meowing", maxXp: 100, effect: -0.01, description: "Reduced Expenses"},
+    "Mindfulness": {name: "Mindfulness", maxXp: 100, effect: 0.01, description: "Skill XP"},
+    "Fruitfulness": {name: "Fruitfulness", maxXp: 100, effect: 0.01, description: "Class/Meowing XP"},
+    "Meowing": {name: "Meowing", maxXp: 100, effect: -0.01, description: "Increased Pay/Discount"},
     "Pondering": {name: "Pondering", maxXp: 100, effect: 0.01, description: "Happiness"},
 
     "Courage": {name: "Courage", maxXp: 100, effect: 0.01, description: "Military Pay"},
     "Battle Mewneuvers": {name: "Battle Mewneuvers", maxXp: 100, effect: 0.01, description: "Military XP"},
-    "Pouncing": {name: "Pouncing", maxXp: 100, effect: 0.01, description: "Strength XP"},
+    "Pouncing": {name: "Pouncing", maxXp: 100, effect: 0.01, description: "Courage XP"},
 
     "Manya Control": {name: "Manya Control", maxXp: 100, effect: 0.01, description: "T.A.A. XP"},
     "Feline Essence": {name: "Feline Essence", maxXp: 100, effect: 0.01, description: "Longer Lifespan"},
@@ -172,24 +172,24 @@ const itemBaseData = {
 
 // This is the start of the items table in the shopping tab.
 
-    "Diary": {name: "Diary", expense: 10, effect: 1.5, description: "Ability XP"},
-    "Weighted Yarnballs": {name: "Weighted Yarnballs", expense: 50, effect: 1.5, description: "Strength XP"},
-    "Personal Assistant": {name: "Personal Assistant", expense: 200, effect: 2, description: "Class XP"},
+    "Diary": {name: "Diary", expense: 10, effect: 1.5, description: "Skill XP"},
+    "Weighted Yarnballs": {name: "Weighted Yarnballs", expense: 50, effect: 1.5, description: "Courage XP"},
+    "Personal Assistant": {name: "Personal Assistant", expense: 200, effect: 2, description: "Class/Meowing XP"},
     "Steel Claws": {name: "Steel Claws", expense: 1000, effect: 2, description: "Military XP"},
     "Catgirl Maid": {name: "Catgirl Maid", expense: 7500, effect: 1.5, description: "Happiness"},
-    "Transmatic Gem": {name: "Transmatic Gem", expense: 50000, effect: 3, description: "Magic XP"},
-    "Fancy Chevrette": {name: "Fancy Chevrette", expense: 1000000, effect: 2, description: "Ability XP"},
-    "Library": {name: "Library", expense: 10000000, effect: 2, description: "Ability XP"},
-	"Observatory": {name: "Observatory", expense: 140000000, effect: 5, description: "Magic XP"},
-	"Mind's Eye": {name: "Mind's Eye", expense: 3250000000, effect: 10, description: "Fundamentals XP"},
+    "Transmatic Gem": {name: "Transmatic Gem", expense: 50000, effect: 3, description: "Catgirl Magic XP"},
+    "Fancy Chevrette": {name: "Fancy Chevrette", expense: 1000000, effect: 2, description: "Skill XP"},
+    "Library": {name: "Library", expense: 10000000, effect: 2, description: "Skill XP"},
+	"Observatory": {name: "Observatory", expense: 140000000, effect: 5, description: "Catgirl Magic XP"},
+	"Mind's Eye": {name: "Mind's Eye", expense: 3250000000, effect: 10, description: "Catgirl Fundamentals XP"},
 	"Angelic Sapphire": {name: "Angelic Sapphire", expense: 28050000000, effect: 3, description: "Void Manipulation XP"},
     "Nyanimite Armor": {name: "Nyanimite Armor", expense: 197050000000, effect: 3, description: "The Void XP"},
-	"Etheral Claws": {name: "Etheral Claws", expense: 502050000000, effect: 3, description: "Ability XP"},
-	"Void Orb": {name: "Void Orb", expense: 1202050000000, effect: 3, description: "Void Manipulation XP"},
-	"Void Dust": {name: "Void Dust", expense: 25002050000000, effect: 3, description: "The Void XP"},
-	"Celestial Robe": {name: "Celestial Robe", expense: 300002050000000, effect: 5, description: "Galactic Council XP"},
-	"Universe Fragment": {name: "Universe Fragment", expense: 18500002050000000, effect: 3, description: "Ability XP"},
-	"Multiverse Fragment": {name: "Multiverse Fragment", expense: 200500002050000000, effect: 5, description: "Happiness"},
+	"Etheral Claws": {name: "Etheral Claws", expense: 502050000000, effect: 3, description: "Skill XP"},
+	"Nyanic Wand": {name: "Nyanic Wand", expense: 1202050000000, effect: 3, description: "Void Manipulation XP"},
+	"Crown of Hearts": {name: "Crown of Hearts", expense: 25002050000000, effect: 3, description: "The Void XP"},
+	"Robes of Transcendance": {name: "Robes of Transcendance", expense: 300002050000000, effect: 5, description: "Galactic Council XP"},
+	"Prismatic Heart": {name: "Prismatic Heart", expense: 18500002050000000, effect: 3, description: "Skill XP"},
+	"Throne of the Divines": {name: "Throne of the Divines", expense: 200500002050000000, effect: 5, description: "Happiness"},
 
 }
 // Here is where the game organizes the classes and skills. So you write them in order. If you want the order
@@ -199,8 +199,8 @@ const jobCategories = {
     "Catgirl Work"            : ["Scrounger", "Catnip Farmer", "Maid", "Catgirl Cafe Waitress", "Sushi Chef", "Business Catgirl"],
     "The Mewarine Corps"               : ["Recruit", "Paw Patrol", "Neko Warrior", "Catvalry", "Nya Nya Knight", "Elite Nya Nya Knight", "Divine Neko Warrior", "Grand Meowarshal"],
     "Meowgic Arcanium" : ["Pupil", "Apprentice Neko Mage", "Adept Neko Mage", "Master Neko Mage", "Arch Neko Mage", "Nekomancer", "College Administrator", "Grandmaster"],
-	"The Void"               : ["Angel", "Guardian Angel", "Archangel", "Seraph", "Divine Wanderer", "Angelic Spirit", "Hevanly Gatekeeper", "Guardian of the Hevans"],
-    "Galactic Council"       : ["Galactic Wanderer", "Celestial Observer", "Demipotent", "Demigoddess", "One Above All"]
+	"Angelic Realm"               : ["Angel", "Guardian Angel", "Archangel", "Seraph", "Divine Wanderer", "Angelic Spirit", "Hevanly Gatekeeper", "Guardian of the Hevans"],
+    "Galactic Council"       : ["Galactic Wanderer", "Celestial Observer", "Demipotent", "Demigoddess", "Catgirl Goddess"]
 
 }
 
@@ -209,7 +209,7 @@ const skillCategories = {
     "Combat"                 : ["Courage", "Battle Mewneuvers", "Pouncing"],
     "Catgirl Magic"                  : ["Manya Control", "Feline Essence", "Zoomy Casting", "Astral Body", "Temporal Zoomies", "Coin Transmutation", "Brainwashing"],
     "Dark Magic"             : ["Adorable Allure", "Fluff Ascension", "Weaponized Cuteness", "Unworldly Adorablness", "Sacred Plushie Ritual", "Midas Paw", "Sacred Knowledge", "Celestial Influence", "Zoomy Looper", "Cutie Incarnate"],
-	"Void Manipulation"      : ["Absolute Wish", "Angelic Amplification", "Enlightened Mind", "Ceaseless Love", "Divine Symbiosis", "Void Embodiment", "Abyss Manipulation"],
+	"Angelic Power"      : ["Absolute Wish", "Angelic Amplification", "Enlightened Mind", "Ceaseless Love", "Divine Symbiosis", "Void Embodiment", "Abyss Manipulation"],
 	"Celestial Powers"       : ["Cosmic Longevity", "Eternal Recollection", "Spectrial Ruminator", "Eternal Tinkerer"],
 	"Almightiness"           : ["Yin Yang", "Parallel Universe", "Higher Dimensions", "Epiphany"]
 	
@@ -217,7 +217,7 @@ const skillCategories = {
 
 const itemCategories = {
     "Properties"             : ["Stray", "Tattered Sheets", "Makeshift Cat Tree", "Apartment", "House", "Large House", "Small Palace", "Grand Palace", "Town Ruler", "Catgirl City Ruler", "Nyation Ruler", "Yarn Dimension", "Void Realm", "Void Universe", "Astral Realm", "Galactic Throne"],
-    "Items"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Void Orb", "Void Dust", "Celestial Robe", "Universe Fragment", "Multiverse Fragment"]
+    "Items"                   : ["Diary", "Weighted Yarnballs", "Personal Assistant", "Steel Claws", "Catgirl Maid", "Transmatic Gem", "Fancy Chevrette", "Library", "Observatory", "Mind's Eye", "Angelic Sapphire", "Nyanimite Armor", "Etheral Claws", "Nyanic Wand", "Crown of Hearts", "Robes of Transcendance", "Prismatic Heart", "Throne of the Divines"]
 }
 // Here is where you update the header row colors. Its does wierd things when you use hex colors. I will probably update this
 // to all RGB later which is easier for me to program. Maybe... we'll see~ lol
@@ -227,14 +227,14 @@ const headerRowColors = {
     "Catgirl Work": "rgb(228, 162, 236)",
     "The Mewarine Corps": "rgb(204, 16, 31)",
     "Meowgic Arcanium": "rgb(28, 191, 255)",
-	"The Void": "rgb(118, 43, 145)",
+	"Angelic Realm": "rgb(118, 43, 145)",
     "Galactic Council": "rgb(213, 192, 16)",
     "Catgirl Fundmentals": "rgb(228, 162, 236)",
     "Combat": "rgb(204, 16, 31)",
     "Catgirl Magic": "rgb(28, 191, 255)",
     "Cutie Magic": "rgb(179, 124, 209)",
 	"Almightiness": "rgb(24, 210, 217)",
-	"Void Manipulation": "rgb(118, 43, 145)",
+	"Angelic Power": "rgb(118, 43, 145)",
 	"Celestial Powers": "rgb(213, 192, 16)",
     "Properties": "rgb(33, 158, 188)",
     "Items": "rgb(127, 134, 0)",
@@ -286,7 +286,7 @@ const tooltips = {
     "Celestial Observer": "Extremely powerful being with tremedous telekinetic powers and the ability to rearrange the molecular structure of matter and energy, even up to cosmic scale.",
 	"Demipotent": "A nigh-omnipotent cosmological entity, with vast matter and energy manipulation abilities that help you push the boundaries of the Universe itself.",
     "Demigoddess": "Primordial being that predate the universe, involved with the creation of life and powerful beyond mortal comprehension, existing as myths to the oldest species in the universe.",
-	"One Above All": "You have become the catgirl creator of everything, a literal god in control of all aspects of the universe. Perhaps maybe you always were a god? Maybe you had simply lost your way or choose to be a mortal for a short time. No matter how it happend or what led you here, you sit upon your throne overseeing the entire universe until the end of time.",
+	"Catgirl Goddess": "You have become the catgirl creator of everything, a literal god in control of all aspects of the universe. Perhaps maybe you always were a god? Maybe you had simply lost your way or choose to be a mortal for a short time. No matter how it happend or what led you here, you sit upon your throne overseeing the entire universe until the end of time.",
 	
 
     //Fundamentals (Catgirl Fundamentals)
@@ -374,11 +374,11 @@ const tooltips = {
 	"Angelic Sapphire": "Helps you shape and manipulate matter, even transmute it and rebuild into anything of your choosing.",
 	"Nyanimite Armor": "Generates an innate armor as a part of you body, which is resistant to attacks, harm or pain.",
 	"Etheral Claws": "Forged from void dust and dark matter, can slash through dimensional barriers. It's a weapon of choice for every Void Reaver.",
-	"Void Orb": "When the orb touches non void entities, it instantly disintegrate them. Harnessing its power from Void realm.",
-	"Void Dust": "Purest version of void created material, a teaspoon of it is as heavy as a small planet. ",
-	"Celestial Robe": "The most powerful and essential equipment of any Celestial. Acts as a source of infinite power.",
-	"Universe Fragment": "From the time the universe was born. Can create another small universes.",
-	"Multiverse Fragment": "Came into existance long before our universe was created, this strange looking object with no shape radiates unlimited energy.",
+	"Nyanic Wand": "When the orb touches non void entities, it instantly disintegrate them. Harnessing its power from Void realm.",
+	"Crown of Hearts": "Purest version of void created material, a teaspoon of it is as heavy as a small planet. ",
+	"Robes of Transcendance": "The most powerful and essential equipment of any Celestial. Acts as a source of infinite power.",
+	"Prismatic Heart": "From the time the universe was born. Can create another small universes.",
+	"Throne of the Divines": "Came into existance long before our universe was created, this strange looking object with no shape radiates unlimited energy.",
 }
 // Okay so after staring at this for a long time and thinking really hard I have managed to achieve 2 things.
 // Smoke coming out of my ears and that this is likely where the code calculates all its multipliers and stuffs.
@@ -430,7 +430,7 @@ function addMultipliers() {
             task.xpMultipliers.push(getBindedItemEffect("Library"))
 			task.xpMultipliers.push(getBindedItemEffect("Etheral Claws"))
 			task.xpMultipliers.push(getBindedTaskEffect("Divine Symbiosis"))
-			task.xpMultipliers.push(getBindedItemEffect("Universe Fragment"))
+			task.xpMultipliers.push(getBindedItemEffect("Prismatic Heart"))
 			task.xpMultipliers.push(getBindedTaskEffect("Cutie Incarnate"))
 			
 
@@ -453,18 +453,18 @@ function addMultipliers() {
         } else if (skillCategories["Catgirl Magic"].includes(task.name)) {
             task.xpMultipliers.push(getBindedItemEffect("Transmatic Gem"))
 			task.xpMultipliers.push(getBindedItemEffect("Observatory"))
-	    } else if (skillCategories["Void Manipulation"].includes(task.name)) {
+	    } else if (skillCategories["Angelic Power"].includes(task.name)) {
             task.xpMultipliers.push(getBindedItemEffect("Angelic Sapphire"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Orb"))
+			task.xpMultipliers.push(getBindedItemEffect("Nyanic Wand"))
         } else if (jobCategories["Meowgic Arcanium"].includes(task.name)) {
             task.xpMultipliers.push(getBindedTaskEffect("Manya Control"))
 			task.incomeMultipliers.push(getBindedTaskEffect("Coin Transmutation"))	
-	    } else if (jobCategories["The Void"].includes(task.name)) {
+	    } else if (jobCategories["Angelic Realm"].includes(task.name)) {
             task.xpMultipliers.push(getBindedTaskEffect("Angelic Amplification"))
 			task.xpMultipliers.push(getBindedItemEffect("Nyanimite Armor"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Dust"))
+			task.xpMultipliers.push(getBindedItemEffect("Crown of Hearts"))
 		} else if (jobCategories["Galactic Council"].includes(task.name)) {
-			task.xpMultipliers.push(getBindedItemEffect("Celestial Robe"))
+			task.xpMultipliers.push(getBindedItemEffect("Robes of Transcendance"))
 			task.xpMultipliers.push(getBindedTaskEffect("Epiphany"))
         } else if (skillCategories["Dark Magic"].includes(task.name)) {
             task.xpMultipliers.push(getEvil)
@@ -485,18 +485,18 @@ function addMultipliers() {
         } else if (skillCategories["Catgirl Magic"].includes(task.name)) {
             task.xpMultipliers.push(getBindedItemEffect("Transmatic Gem"))
 			task.xpMultipliers.push(getBindedItemEffect("Observatory"))
-	    } else if (skillCategories["Void Manipulation"].includes(task.name)) {
+	    } else if (skillCategories["Angelic Power"].includes(task.name)) {
             task.xpMultipliers.push(getBindedItemEffect("Angelic Sapphire"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Orb"))
+			task.xpMultipliers.push(getBindedItemEffect("Nyanic Wand"))
         } else if (jobCategories["Meowgic Arcanium"].includes(task.name)) {
             task.xpMultipliers.push(getBindedTaskEffect("Manya Control"))
 			task.incomeMultipliers.push(getBindedTaskEffect("Coin Transmutation"))	
-	    } else if (jobCategories["The Void"].includes(task.name)) {
+	    } else if (jobCategories["Angelic Realm"].includes(task.name)) {
             task.xpMultipliers.push(getBindedTaskEffect("Angelic Amplification"))
 			task.xpMultipliers.push(getBindedItemEffect("Nyanimite Armor"))
-			task.xpMultipliers.push(getBindedItemEffect("Void Dust"))
+			task.xpMultipliers.push(getBindedItemEffect("Crown of Hearts"))
 		} else if (jobCategories["Galactic Council"].includes(task.name)) {
-			task.xpMultipliers.push(getBindedItemEffect("Celestial Robe"))
+			task.xpMultipliers.push(getBindedItemEffect("Robes of Transcendance"))
 			task.xpMultipliers.push(getBindedTaskEffect("Epiphany"))
         } else if (skillCategories["Dark Magic"].includes(task.name)) {
             task.xpMultipliers.push(getEvil)
@@ -521,35 +521,35 @@ function addMultipliers() {
 function setCustomEffects() {
     var bargaining = gameData.taskData["Meowing"]
     bargaining.getEffect = function() {
-        var multiplier = 1 - getBaseLog(7, bargaining.level + 1) / 10
+        var multiplier = 1 - getBaseLog(7, bargaining.level + 2) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
 
     var intimidation = gameData.taskData["Weaponized Cuteness"]
     intimidation.getEffect = function() {
-        var multiplier = 1 - getBaseLog(7, intimidation.level + 1) / 10
+        var multiplier = 1 - getBaseLog(7, intimidation.level + 2) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
 	
 	var brainwashing = gameData.taskData["Brainwashing"]
     brainwashing.getEffect = function() {
-        var multiplier = 1 - getBaseLog(7, brainwashing.level + 1) / 10
+        var multiplier = 1 - getBaseLog(7, brainwashing.level + 2) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
 	
 	var abyssManipulation = gameData.taskData["Abyss Manipulation"]
     abyssManipulation.getEffect = function() {
-        var multiplier = 1 - getBaseLog(7, abyssManipulation.level + 1) / 10
+        var multiplier = 1 - getBaseLog(7, abyssManipulation.level + 2) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
 
     var galacticCommand = gameData.taskData["Eternal Tinkerer"]
     galacticCommand.getEffect = function() {
-        var multiplier = 1 - getBaseLog(7, galacticCommand.level + 1) / 10
+        var multiplier = 1 - getBaseLog(7, galacticCommand.level + 2) / 10
         if (multiplier < 0.1) {multiplier = 0.1}
         return multiplier
     }
@@ -557,13 +557,13 @@ function setCustomEffects() {
 
     var timeWarping = gameData.taskData["Zoomy Casting"]
     timeWarping.getEffect = function() {
-        var multiplier = 1 + getBaseLog(13, timeWarping.level + 1) 
+        var multiplier = 1 + getBaseLog(13, timeWarping.level + 2) 
         return multiplier
     }
 
     var immortality = gameData.taskData["Feline Essence"]
     immortality.getEffect = function() {
-        var multiplier = 1 + getBaseLog(33, immortality.level + 1) 
+        var multiplier = 1 + getBaseLog(33, immortality.level + 2) 
         return multiplier
     }
 	
@@ -579,7 +579,7 @@ function getHappiness() {
     var meditationEffect = getBindedTaskEffect("Pondering")
     var butlerEffect = getBindedItemEffect("Catgirl Maid")
 	var mindseizeEffect = getBindedTaskEffect("Enlightened Mind")
-	var multiverseFragment = getBindedItemEffect("Multiverse Fragment")
+	var multiverseFragment = getBindedItemEffect("Throne of the Divines")
     var happiness = meditationEffect() * butlerEffect() / mindseizeEffect() * multiverseFragment() * gameData.currentProperty.getEffect()
     return happiness
 }
@@ -593,7 +593,7 @@ function getEssence() {
 }
 
 function applyMultipliers(value, multipliers) {
-    var finalMultiplier = 2
+    var finalMultiplier = 1
     multipliers.forEach(function(multiplierFunction) {
         var multiplier = multiplierFunction()
         finalMultiplier *= multiplier
@@ -1527,8 +1527,8 @@ gameData.requirements = {
     //Other
     "Meowgic Arcanium": new TaskRequirement(getElementsByClass("Meowgic Arcanium"), [{task: "Mindfulness", requirement: 200}, {task: "Pondering", requirement: 200}]),
 	"Galactic Council": new AgeRequirement(getElementsByClass("Galactic Council"), [{requirement: 10000}]),
-	"The Void": new AgeRequirement(getElementsByClass("The Void"), [{requirement: 1000}]),
-	"Void Manipulation": new AgeRequirement(getElementsByClass("Void Manipulation"), [{requirement: 1000}]),
+	"Angelic Realm": new AgeRequirement(getElementsByClass("Angelic Realm"), [{requirement: 1000}]),
+	"Angelic Power": new AgeRequirement(getElementsByClass("Angelic Power"), [{requirement: 1000}]),
 	"Celestial Powers": new AgeRequirement(getElementsByClass("Celestial Powers"), [{requirement: 10000}]),
     "Dark Magic": new EvilRequirement(getElementsByClass("Dark Magic"), [{requirement: 1}]),
 	"Almightiness": new EssenceRequirement(getElementsByClass("Almightiness"), [{requirement: 1}]),
@@ -1593,7 +1593,7 @@ gameData.requirements = {
     "Celestial Observer": new TaskRequirement([getTaskElement("Celestial Observer")], [{task: "Galactic Wanderer", requirement: 15}, {task: "Cosmic Longevity", requirement: 4000}]),
 	"Demipotent": new TaskRequirement([getTaskElement("Demipotent")], [{task: "Celestial Observer", requirement: 200}, {task: "Eternal Recollection", requirement: 4500}]),
 	"Demigoddess": new TaskRequirement([getTaskElement("Demigoddess")], [{task: "Eternal Tinkerer", requirement: 5000}, {task: "Demipotent", requirement: 1000}]),
-	"One Above All": new TaskRequirement([getTaskElement("One Above All")], [{task: "Pondering", requirement: 6300}, {task: "Demigoddess", requirement: 1400}]),
+	"Catgirl Goddess": new TaskRequirement([getTaskElement("Catgirl Goddess")], [{task: "Pondering", requirement: 6300}, {task: "Demigoddess", requirement: 1400}]),
 
 	
 
@@ -1686,11 +1686,11 @@ gameData.requirements = {
 	"Angelic Sapphire": new CoinRequirement([getItemElement("Angelic Sapphire")], [{requirement: gameData.itemData["Angelic Sapphire"].getExpense() * 100}]),
 	"Nyanimite Armor": new CoinRequirement([getItemElement("Nyanimite Armor")], [{requirement: gameData.itemData["Nyanimite Armor"].getExpense() * 100}]),
 	"Etheral Claws": new CoinRequirement([getItemElement("Etheral Claws")], [{requirement: gameData.itemData["Etheral Claws"].getExpense() * 100}]),
-	"Void Orb": new CoinRequirement([getItemElement("Void Orb")], [{requirement: gameData.itemData["Void Orb"].getExpense() * 100}]),
-	"Void Dust": new CoinRequirement([getItemElement("Void Dust")], [{requirement: gameData.itemData["Void Dust"].getExpense() * 100}]),
-	"Celestial Robe": new CoinRequirement([getItemElement("Celestial Robe")], [{requirement: gameData.itemData["Celestial Robe"].getExpense() * 100}]),
-	"Universe Fragment": new CoinRequirement([getItemElement("Universe Fragment")], [{requirement: gameData.itemData["Universe Fragment"].getExpense() * 100}]),
-	"Multiverse Fragment": new CoinRequirement([getItemElement("Multiverse Fragment")], [{requirement: gameData.itemData["Multiverse Fragment"].getExpense() * 100}]),
+	"Nyanic Wand": new CoinRequirement([getItemElement("Nyanic Wand")], [{requirement: gameData.itemData["Nyanic Wand"].getExpense() * 100}]),
+	"Crown of Hearts": new CoinRequirement([getItemElement("Crown of Hearts")], [{requirement: gameData.itemData["Crown of Hearts"].getExpense() * 100}]),
+	"Robes of Transcendance": new CoinRequirement([getItemElement("Robes of Transcendance")], [{requirement: gameData.itemData["Robes of Transcendance"].getExpense() * 100}]),
+	"Prismatic Heart": new CoinRequirement([getItemElement("Prismatic Heart")], [{requirement: gameData.itemData["Prismatic Heart"].getExpense() * 100}]),
+	"Throne of the Divines": new CoinRequirement([getItemElement("Throne of the Divines")], [{requirement: gameData.itemData["Throne of the Divines"].getExpense() * 100}]),
 }
 
 tempData["requirements"] = {}
