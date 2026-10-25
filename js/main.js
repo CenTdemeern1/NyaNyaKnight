@@ -50,15 +50,15 @@ const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task displa
 
 const jobBaseData = {
     "Scrounger": {name: "Scrounger", maxXp: 50, income: 5},
-    "Catnip Farmer": {name: "Catnip Farmer", maxXp: 100, income: 9},
+    "Catnip Farmer": {name: "Catnip Farmer", maxXp: 100, income: 10},
     "Maid": {name: "Maid", maxXp: 200, income: 15},
-    "Catgirl Cafe Waitress": {name: "Catgirl Cafe Waitress", maxXp: 400, income: 40},
-    "Sushi Chef": {name: "Sushi Chef", maxXp: 800, income: 80},
-    "Business Catgirl": {name: "Business Catgirl", maxXp: 1600, income: 150},
+    "Catgirl Cafe Waitress": {name: "Catgirl Cafe Waitress", maxXp: 400, income: 150},
+    "Sushi Chef": {name: "Sushi Chef", maxXp: 800, income: 300},
+    "Business Catgirl": {name: "Business Catgirl", maxXp: 1600, income: 500},
 
-    "Recruit": {name: "Recruit", maxXp: 100, income: 5},
+    "Recruit": {name: "Recruit", maxXp: 100, income: 15},
     "Paw Patrol": {name: "Paw Patrol", maxXp: 1000, income: 50},
-    "Neko Warrior": {name: "Neko Warrior", maxXp: 10000, income: 120},
+    "Neko Warrior": {name: "Neko Warrior", maxXp: 10000, income: 100},
     "Catvalry": {name: "Catvalry", maxXp: 100000, income: 300},
     "Nya Nya Knight": {name: "Nya Nya Knight", maxXp: 1000000, income: 1000},
     "Elite Nya Nya Knight": {name: "Elite Nya Nya Knight", maxXp: 7500000, income: 3000},
@@ -435,7 +435,44 @@ function addMultipliers() {
 			
 
 		
-		
+		}
+        if (jobCategories["Catgirl Work"].includes(task.name)) {
+            task.incomeMultipliers.push(getBindedTaskEffect("Meowing"))
+            task.xpMultipliers.push(getBindedTaskEffect("Fruitfulness"))
+            task.xpMultipliers.push(getBindedItemEffect("Personal Assistant"))
+        } else if (task.name == "Meowing") {
+            task.xpMultipliers.push(getBindedTaskEffect("Fruitfulness"))
+            task.xpMultipliers.push(getBindedItemEffect("Diary"))
+        if (jobCategories["The Mewarine Corps"].includes(task.name)) {
+            task.incomeMultipliers.push(getBindedTaskEffect("Courage"))
+            task.xpMultipliers.push(getBindedTaskEffect("Battle Mewneuvers"))
+            task.xpMultipliers.push(getBindedItemEffect("Steel Claws"))
+        } else if (task.name == "Courage") {
+            task.xpMultipliers.push(getBindedTaskEffect("Pouncing"))
+            task.xpMultipliers.push(getBindedItemEffect("Weighted Yarnballs"))
+        } else if (skillCategories["Catgirl Magic"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedItemEffect("Transmatic Gem"))
+			task.xpMultipliers.push(getBindedItemEffect("Observatory"))
+	    } else if (skillCategories["Void Manipulation"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedItemEffect("Angelic Sapphire"))
+			task.xpMultipliers.push(getBindedItemEffect("Void Orb"))
+        } else if (jobCategories["Meowgic Arcanium"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedTaskEffect("Manya Control"))
+			task.incomeMultipliers.push(getBindedTaskEffect("Coin Transmutation"))	
+	    } else if (jobCategories["The Void"].includes(task.name)) {
+            task.xpMultipliers.push(getBindedTaskEffect("Angelic Amplification"))
+			task.xpMultipliers.push(getBindedItemEffect("Nyanimite Armor"))
+			task.xpMultipliers.push(getBindedItemEffect("Void Dust"))
+		} else if (jobCategories["Galactic Council"].includes(task.name)) {
+			task.xpMultipliers.push(getBindedItemEffect("Celestial Robe"))
+			task.xpMultipliers.push(getBindedTaskEffect("Epiphany"))
+        } else if (skillCategories["Dark Magic"].includes(task.name)) {
+            task.xpMultipliers.push(getEvil)
+        } else if (skillCategories["Almightiness"].includes(task.name)) {
+			task.xpMultipliers.push(getEssence)
+        } else if (skillCategories["Catgirl Fundmentals"].includes(task.name)) {
+			task.xpMultipliers.push(getBindedItemEffect("Mind's Eye"))
+		}
         }
 
         if (jobCategories["The Mewarine Corps"].includes(task.name)) {
