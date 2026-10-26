@@ -1767,12 +1767,12 @@ function rebirthThree() {
 function rebirthReset() {
     setTab(jobTabButton, 'jobs');
     gameData.coins = 0;
-    gameData.days = 365 * 14;
+    gameData.days = 365 * 18;
     gameData.currentJob = gameData.taskData['Scrounger'];
     gameData.currentSkill = gameData.taskData['Mindfulness'];
     gameData.currentProperty = gameData.itemData['Stray'];
     gameData.currentMisc = [];
-    for (taskName in gameData.taskData) {
+    for (let taskName in gameData.taskData) {
         var task = gameData.taskData[taskName];
         if (task.level > task.maxLevel)
             task.maxLevel = task.level;
