@@ -167,12 +167,12 @@ const jobBaseData: Record<JobName, JobProperties> = {
     'Apprentice Neko Mage': {
         name: 'Apprentice Neko Mage',
         maxXp: 1000000,
-        income: 1000,
+        income: 5000,
     },
     'Adept Neko Mage': {
         name: 'Adept Neko Mage',
         maxXp: 10000000,
-        income: 9500,
+        income: 10000,
     },
     'Master Neko Mage': {
         name: 'Master Neko Mage',
@@ -2637,28 +2637,28 @@ gameData.requirements = {
         [getTaskElement('Apprentice Neko Mage')],
         [
             { task: 'Manya Control', requirement: 400 },
-            { task: 'Pupil', requirement: 10 },
+            { task: 'Pupil', requirement: 30 },
         ],
     ),
     'Adept Neko Mage': new TaskRequirement(
         [getTaskElement('Adept Neko Mage')],
         [
             { task: 'Manya Control', requirement: 700 },
-            { task: 'Apprentice Neko Mage', requirement: 10 },
+            { task: 'Apprentice Neko Mage', requirement: 40 },
         ],
     ),
     'Master Neko Mage': new TaskRequirement(
         [getTaskElement('Master Neko Mage')],
         [
             { task: 'Manya Control', requirement: 1000 },
-            { task: 'Adept Neko Mage', requirement: 10 },
+            { task: 'Adept Neko Mage', requirement: 50 },
         ],
     ),
     'Arch Neko Mage': new TaskRequirement(
         [getTaskElement('Arch Neko Mage')],
         [
             { task: 'Manya Control', requirement: 1200 },
-            { task: 'Master Neko Mage', requirement: 10 },
+            { task: 'Master Neko Mage', requirement: 60 },
         ],
     ),
     'Nekomancer': new TaskRequirement(
@@ -2666,7 +2666,7 @@ gameData.requirements = {
         [
             { task: 'Manya Control', requirement: 1500 },
             { task: 'Pondering', requirement: 1500 },
-            { task: 'Arch Neko Mage', requirement: 25 },
+            { task: 'Arch Neko Mage', requirement: 70 },
         ],
     ),
     'College Administrator': new TaskRequirement(
@@ -2674,7 +2674,7 @@ gameData.requirements = {
         [
             { task: 'Manya Control', requirement: 2000 },
             { task: 'Fruitfulness', requirement: 2000 },
-            { task: 'Nekomancer', requirement: 50 },
+            { task: 'Nekomancer', requirement: 80 },
         ],
     ),
     'Grandmaster': new TaskRequirement(
@@ -2682,14 +2682,14 @@ gameData.requirements = {
         [
             { task: 'Coin Transmutation', requirement: 3000 },
             { task: 'Mindfulness', requirement: 3000 },
-            { task: 'College Administrator', requirement: 666 },
+            { task: 'College Administrator', requirement: 90 },
         ],
     ),
 
     //The Void
     'Angel': new AgeRequirement(
         [getTaskElement('Angel')],
-        [{ task: 'Recruit', requirement: 1000 }],
+        [{ task: 'Scrounger', requirement: 1000 }],
     ),
     'Guardian Angel': new TaskRequirement(
         [getTaskElement('Guardian Angel')],
