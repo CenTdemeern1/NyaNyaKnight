@@ -728,7 +728,7 @@ const skillCategories = {
         'Coin Transmutation',
         'Brainwashing',
     ],
-    'Dark Magic': [
+    'Cutie Magic': [
         'Adorable Allure',
         'Fluff Ascension',
         'Weaponized Cuteness',
@@ -1186,7 +1186,7 @@ function addMultipliers() {
                     getBindedItemEffect('Robes of Transcendance'),
                 );
                 task.xpMultipliers.push(getBindedTaskEffect('Epiphany'));
-            } else if (skillCategories['Dark Magic'].includes(task.name)) {
+            } else if (skillCategories['Cutie Magic'].includes(task.name)) {
                 task.xpMultipliers.push(getEvil);
             } else if (skillCategories['Almightiness'].includes(task.name)) {
                 task.xpMultipliers.push(getEssence);
@@ -1226,7 +1226,7 @@ function addMultipliers() {
                 getBindedItemEffect('Robes of Transcendance'),
             );
             task.xpMultipliers.push(getBindedTaskEffect('Epiphany'));
-        } else if (skillCategories['Dark Magic'].includes(task.name)) {
+        } else if (skillCategories['Cutie Magic'].includes(task.name)) {
             task.xpMultipliers.push(getEvil);
         } else if (skillCategories['Almightiness'].includes(task.name)) {
             task.xpMultipliers.push(getEssence);
@@ -1625,7 +1625,7 @@ function updateRequiredRows(data, categoryType) {
                 if (requirementObject instanceof EvilRequirement) {
                     evilElement.classList.remove('hiddenTask');
                     evilElement.textContent =
-                        format(requirements[0].requirement) + ' evil';
+                        format(requirements[0].requirement) + ' cuteness';
                 } else if (requirementObject instanceof EssenceRequirement) {
                     essenceElement.classList.remove('hiddenTask');
                     essenceElement.textContent =
@@ -2447,7 +2447,7 @@ gameData.requirements = {
         getElementsByClass('Celestial Powers'),
         [{ requirement: 10000 }],
     ),
-    'Dark Magic': new EvilRequirement(getElementsByClass('Dark Magic'), [
+    'Cutie Magic': new EvilRequirement(getElementsByClass('Cutie Magic'), [
         { requirement: 1 },
     ]),
     'Almightiness': new EssenceRequirement(getElementsByClass('Almightiness'), [

@@ -57,7 +57,7 @@ class Skill extends Task {
     }
     getEffectDescription() {
         var description = this.baseData.description;
-        var text = "x" + String(this.getEffect().toFixed(2)) + " " + description;
+        var text = 'x' + String(this.getEffect().toFixed(2)) + ' ' + description;
         return text;
     }
 }
@@ -68,16 +68,17 @@ class Item {
         this.expenseMultipliers = [];
     }
     getEffect() {
-        if (gameData.currentProperty != this && !gameData.currentMisc.includes(this))
+        if (gameData.currentProperty != this &&
+            !gameData.currentMisc.includes(this))
             return 1;
         var effect = this.baseData.effect;
         return effect;
     }
     getEffectDescription() {
         var description = this.baseData.description;
-        if (itemCategories["Properties"].includes(this.name))
-            description = "Happiness";
-        var text = "x" + this.baseData.effect.toFixed(1) + " " + description;
+        if (itemCategories['Properties'].includes(this.name))
+            description = 'Happiness';
+        var text = 'x' + this.baseData.effect.toFixed(1) + ' ' + description;
         return text;
     }
     getExpense() {
@@ -106,16 +107,16 @@ class Requirement {
 class TaskRequirement extends Requirement {
     constructor(elements, requirements) {
         super(elements, requirements);
-        this.type = "task";
+        this.type = 'task';
     }
     getCondition(requirement) {
-        return gameData.taskData[requirement.task].level >= requirement.requirement;
+        return (gameData.taskData[requirement.task].level >= requirement.requirement);
     }
 }
 class CoinRequirement extends Requirement {
     constructor(elements, requirements) {
         super(elements, requirements);
-        this.type = "coins";
+        this.type = 'coins';
     }
     getCondition(requirement) {
         return gameData.coins >= requirement.requirement;
@@ -124,7 +125,7 @@ class CoinRequirement extends Requirement {
 class AgeRequirement extends Requirement {
     constructor(elements, requirements) {
         super(elements, requirements);
-        this.type = "age";
+        this.type = 'age';
     }
     getCondition(requirement) {
         return daysToYears(gameData.days) >= requirement.requirement;
@@ -133,7 +134,7 @@ class AgeRequirement extends Requirement {
 class EvilRequirement extends Requirement {
     constructor(elements, requirements) {
         super(elements, requirements);
-        this.type = "evil";
+        this.type = 'evil';
     }
     getCondition(requirement) {
         return gameData.evil >= requirement.requirement;
@@ -142,7 +143,7 @@ class EvilRequirement extends Requirement {
 class EssenceRequirement extends Requirement {
     constructor(elements, requirements) {
         super(elements, requirements);
-        this.type = "essence";
+        this.type = 'essence';
     }
     getCondition(requirement) {
         return gameData.essence >= requirement.requirement;
