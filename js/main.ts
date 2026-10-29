@@ -2066,7 +2066,7 @@ function rebirthTwo() {
 
     rebirthReset();
 
-    for (taskName in gameData.taskData) {
+    for (let taskName in gameData.taskData) {
         var task = gameData.taskData[taskName];
         task.maxLevel = 0;
     }
